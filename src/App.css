@@ -1,0 +1,87 @@
+.App {
+  display: flex;
+}
+
+.columnAlign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 1200px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.tenses {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 70%;
+  margin:auto;
+  padding-bottom: 1%;
+  padding-top: 1%;
+
+}
+
+.tensesHeader {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 70%;
+  margin:auto;
+  margin-bottom: 20px;
+  font-size: xx-large;
+  padding-top: 5px;
+}
+
+
+
+.exampleTense {
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+
+.conjugationTable {
+  border-collapse: collapse; /* Ensures borders are connected */
+  width: 50%;
+  table-layout: fixed;
+
+  
+}
+
+.conjugationTable .bold {
+  font-weight: bold; /* Apply bold style */
+}
+
+.conjugationTable td {
+  border: 1px solid #ddd;  /* Inner cell borders */
+  padding: 8px;
+  text-align: center; /* Optional: Align text in the center */
+}
+
+.conjugationTable tr:first-child td {
+  border-top: none; /* Keep border at the top of the first row */
+}
+
+.conjugationTable tr:last-child td {
+  border-bottom: none; /* Keep border at the bottom of the last row */
+}
+
+.conjugationTable td:first-child {
+  border-left: none; /* Keep left border for the first column */
+}
+
+.conjugationTable td:last-child {
+  border-right:none; /* Keep right border for the last column */
+}
+
+.conjugationTable td:first {
+  border-right:none; /* Keep right border for the last column */
+}

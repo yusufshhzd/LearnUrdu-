@@ -1,0 +1,3 @@
+There are a lack of one-stop resources to learning Urdu strictly through the Roman alphabet, and many resources to learning are often convoluted.
+This application intends to serve as a simple place for a guide to learn Urdu, and for those who are not concerned about the Nastaliq script.
+This resource is also mainly intended to help myself learn to speak Urdu, as someone who already can understand the language.
