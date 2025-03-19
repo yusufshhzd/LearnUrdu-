@@ -27,9 +27,9 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    name: "Yusuf Shahzad",
+    email: "yusufshhzd@gmail.com",
+    avatar: "/avatar/shadcn.jpg",
   },
   teams: [
     {
@@ -51,7 +51,7 @@ const data = {
   navMain: [
     {
       title: "Tenses",
-      url: "#",
+      url: "/simple-past",
       icon: SquareTerminal,
       isActive: true,
       items: [
@@ -73,7 +73,7 @@ const data = {
         },
         {
           title: "Simple Past",
-          url: "#",
+          url: "simple-past",
         },
         {
           title: "Past Continuous",

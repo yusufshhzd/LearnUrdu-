@@ -2,12 +2,11 @@ import { Stack, Typography, Card, CardContent, Paper } from '@mui/material';
 import ContainedButton from '../components/ContainedButton';
 import { useNavigate } from 'react-router-dom';
 import SimplePresent from './SimplePresent';
-import SideNav from '../components/SideNav';
 import React from 'react';
 import { SidebarProvider, SidebarTrigger } from '../components/ui/sidebar';
 import { AppSidebar } from '../components/app-sidebar';
 
-function Home() {
+function Tenses() {
 
   const navigate = useNavigate();
 
@@ -183,4 +182,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Tenses;
