@@ -50,23 +50,59 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
+      title: "Tenses",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "Simple Present",
+          url: "simple-present",
+        },
+        {
+          title: "Present Continuous",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Present Perfect",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "Present Perfect Continuous",
           url: "#",
         },
+        {
+          title: "Simple Past",
+          url: "#",
+        },
+        {
+          title: "Past Continuous",
+          url: "#",
+        },
+        {
+          title: "Past Perfect",
+          url: "#",
+        },
+        {
+          title: "Past Perfect Continuous",
+          url: "#",
+        },
+        {
+          title: "Simple Future",
+          url: "#",
+        },
+        {
+          title: "Future Continuous",
+          url: "#",
+        },
+        {
+          title: "Future Perfect",
+          url: "#",
+        },
+        {
+          title: "Present Perfect Continuous",
+          url: "#",
+        }
       ],
     },
     {
@@ -157,9 +193,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
-      </SidebarHeader>
+     
       <SidebarContent>
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />

@@ -45,7 +45,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }),
+        "sticky top-4 z-10"  // Added sticky positioning
+        )}
         ref={ref}
         {...props}
       />
