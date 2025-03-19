@@ -1,59 +1,35 @@
 import * as React from "react"
-import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
+import { GalleryVerticalEnd } from "lucide-react"
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
-import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
+  SidebarGroup,
   SidebarHeader,
-  SidebarRail,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
 // This is sample data.
 const data = {
-  user: {
-    name: "Yusuf Shahzad",
-    email: "yusufshhzd@gmail.com",
-    avatar: "/avatar/shadcn.jpg",
-  },
-  teams: [
-    {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
-      plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
   navMain: [
     {
+      title: "Introduction",
+      url: "#",
+      items: [
+        {
+          title: "Basic Sentence Structure",
+          url: "#",
+        }
+      ],
+    },
+    {
       title: "Tenses",
-      url: "/simple-past",
-      icon: SquareTerminal,
-      isActive: true,
+      url: "#",
       items: [
         {
           title: "Simple Present",
@@ -61,66 +37,70 @@ const data = {
         },
         {
           title: "Present Continuous",
-          url: "#",
+          url: "",
+          isActive: true,
         },
-        {
-          title: "Present Perfect",
-          url: "#",
-        },
-        {
-          title: "Present Perfect Continuous",
-          url: "#",
-        },
-        {
-          title: "Simple Past",
-          url: "simple-past",
-        },
-        {
-          title: "Past Continuous",
-          url: "#",
-        },
-        {
-          title: "Past Perfect",
-          url: "#",
-        },
-        {
-          title: "Past Perfect Continuous",
-          url: "#",
-        },
-        {
-          title: "Simple Future",
-          url: "#",
-        },
-        {
-          title: "Future Continuous",
-          url: "#",
-        },
-        {
-          title: "Future Perfect",
-          url: "#",
-        },
-        {
-          title: "Present Perfect Continuous",
-          url: "#",
-        }
       ],
-    }
-  ]
+    },
   
+    {
+      title: "Vocab",
+      url: "#",
+      items: [
+        {
+          title: "Common Phrases",
+          url: "#",
+        },
+      ],
+    },
+  ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar variant="floating" {...props}>
       <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton size="lg" asChild>
+              <a href="#">
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                  <GalleryVerticalEnd className="size-4" />
+                </div>
+                <div className="flex flex-col gap-0.5 leading-none">
+                  <span className="font-semibold">LearnUrdu</span>
+                </div>
+              </a>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <SidebarGroup>
+          <SidebarMenu className="gap-2">
+            {data.navMain.map((item) => (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton asChild>
+                  <a href={item.url} className="font-medium">
+                    {item.title}
+                  </a>
+                </SidebarMenuButton>
+                {item.items?.length ? (
+                  <SidebarMenuSub className="ml-0 border-l-0 px-1.5">
+                    {item.items.map((item) => (
+                      <SidebarMenuSubItem key={item.title}>
+                        <SidebarMenuSubButton asChild isActive={item.isActive}>
+                          <a href={item.url}>{item.title}</a>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    ))}
+                  </SidebarMenuSub>
+                ) : null}
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
-      <SidebarRail />
     </Sidebar>
   )
 }
