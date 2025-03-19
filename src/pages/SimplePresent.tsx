@@ -1,6 +1,8 @@
 import { Typography } from '@mui/material';
 import ConjugationTable from '../components/ConjugationTable';
 import React from 'react';
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { AppSidebar } from '@/components/app-sidebar';
 
 export const SimplePresent = () => {
 
@@ -43,6 +45,7 @@ export const SimplePresent = () => {
         <h4>Plural</h4>
         <ConjugationTable data={data2} />
       </div>
+      
     </div>
       
       );
