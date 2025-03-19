@@ -23,22 +23,23 @@ const data = {
       items: [
         {
           title: "Basic Sentence Structure",
-          url: "#",
+          url: "",
         }
       ],
     },
     {
       title: "Tenses",
-      url: "#",
+      url: "tenses",
       items: [
         {
           title: "Simple Present",
           url: "simple-present",
+          
         },
         {
           title: "Present Continuous",
           url: "",
-          isActive: true,
+          isActive: false, //this controls the highlight
         },
       ],
     },
