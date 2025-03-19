@@ -19,11 +19,11 @@ const data = {
   navMain: [
     {
       title: "Introduction",
-      url: "#",
+      url: "introduction",
       items: [
         {
           title: "Basic Sentence Structure",
-          url: "",
+          url: "basic-sentence-structure",
         }
       ],
     },
