@@ -52,8 +52,14 @@
 }
 
 .rightOfSidebar {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  background-color: grey;
+  /* justify-content: center; centers horizontally */
+  align-items: center; /*centers vertically*/
 }
+
 
 
 .conjugationTable {

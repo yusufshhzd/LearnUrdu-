@@ -35,14 +35,22 @@ export const SimplePresent = () => {
 
   return (
 
+    <div>
 
-  <SidebarProvider>
-      <AppSidebar />
+      <SidebarProvider>
+        <AppSidebar />
         <SidebarTrigger />
-        <div className="flex-1 bg-blue-200 p-4">
+        <div className="rightOfSidebar">
           Simple Present Tense
+
+          <div>
+            test
+          </div>
         </div>
-  </SidebarProvider>
+      </SidebarProvider>
+
+
+    </div>
 
 
 
