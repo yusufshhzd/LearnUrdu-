@@ -51,6 +51,10 @@
  
 }
 
+.rightOfSidebar {
+  flex: 1;
+}
+
 
 .conjugationTable {
   border-collapse: collapse; /* Ensures borders are connected */
