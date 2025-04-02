@@ -55,18 +55,17 @@
   display: flex;
   flex: 1; /*this fills up remaining width*/
   flex-direction: column;
-  background-color: grey;
   /* justify-content: center; centers horizontally */
   align-items: center; /*centers vertically*/
+  padding: 2rem;
 }
 
 
 
 .conjugationTable {
   border-collapse: collapse; /* Ensures borders are connected */
-  width: 50%;
+  width: 65%;
   table-layout: fixed;
-
   
 }
 
@@ -98,5 +97,13 @@
 
 .conjugationTable td:first {
   border-right:none; /* Keep right border for the last column */
+}
+
+.tableCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  
 }
 

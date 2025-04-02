@@ -8,10 +8,6 @@ import { SidebarContext, SidebarContextProps } from "@/components/ui/sidebar"
 
 export const SimplePresent = () => {
 
-  const sidebarContext = useContext(SidebarContext);
-
-  // ✅ Use a fallback in case context is null (for safety)
-  const isSidebarOpen = sidebarContext?.state === "expanded";
 
 
   const data1 = [
@@ -41,11 +37,20 @@ export const SimplePresent = () => {
         <AppSidebar />
         <SidebarTrigger />
         <div className="rightOfSidebar">
-          Simple Present Tense
+          <Typography variant="h4">Simple Present Tense</Typography>
 
-          <div>
-            test
+
+          <div className='tableCard'>
+            <Typography variant="h6">Singular</Typography>
+            <ConjugationTable data={data1} />
           </div>
+
+          <div className='tableCard'>
+            <Typography variant="h6">Plural</Typography>
+            <ConjugationTable data={data2} />
+          </div>
+
+
         </div>
       </SidebarProvider>
 
