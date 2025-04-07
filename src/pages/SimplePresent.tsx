@@ -40,12 +40,12 @@ export const SimplePresent = () => {
 
 
           <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 8, marginTop: '50px' }} >
-          <div className='tenseCard'>
-            <Typography variant="h5">What is the Simple Present Tense?</Typography>
-            <Typography style={{ textAlign: "center" }} variant="h6">✅ Habits<br /> <i>Mai har roz chai peeta hoon</i> <br /> <i>I drink tea every day</i></Typography>
-            <Typography style={{ textAlign: "center" }} variant="h6">✅ Facts<br /> <i>Suraj purab se nikalta hai</i> <br /> <i>The sun rises in the east</i></Typography>
-            <Typography style={{ textAlign: "center" }} variant="h6">✅ Routines<br /> <i>Woh school jaati hai</i> <br /> <i>She goes to school</i></Typography>
-          </div>
+            <div className='tenseCard'>
+              <Typography variant="h5">What is the Simple Present Tense?</Typography>
+              <Typography style={{ textAlign: "center" }} variant="h6">✅ Habits<br /> <i>Mai har roz chai peeta hoon</i> <br /> <i>I drink tea every day</i></Typography>
+              <Typography style={{ textAlign: "center" }} variant="h6">✅ Facts<br /> <i>Suraj purab se nikalta hai</i> <br /> <i>The sun rises in the east</i></Typography>
+              <Typography style={{ textAlign: "center" }} variant="h6">✅ Routines<br /> <i>Woh school jaati hai</i> <br /> <i>She goes to school</i></Typography>
+            </div>
           </Paper>
 
 

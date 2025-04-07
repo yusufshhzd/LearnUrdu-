@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ConjugationTable = ({data} : {data:any}) => {
+const ConjugationTable = ({ data }: { data: any }) => {
   const rows = data.length;
   const columns = data[0].length;
-  
+
   const createTable = () => {
     const table = [];
     for (let row = 0; row < rows; row++) {
