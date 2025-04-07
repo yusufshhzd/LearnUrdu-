@@ -99,11 +99,11 @@
   border-right:none; /* Keep right border for the last column */
 }
 
-.tableCard {
+.tenseCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
-  
+  padding: 3rem;
+  row-gap: 2rem;
 }
 

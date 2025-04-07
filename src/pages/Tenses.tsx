@@ -32,10 +32,10 @@ function Tenses() {
             <div className='buttonTenseDiv'>
               <ContainedButton text={"Simple\nPresent"} onClick={() => navigate('/simple-present')} />
               <div className='exampleTense'>
-                "I eat food"
+                <Typography>"I eat food"</Typography>
               </div>
               <div className='exampleTense'>
-                "Mai khana khata hoon"
+                <Typography> "Mai khana khata hoon" </Typography>
               </div>
             </div>
            
