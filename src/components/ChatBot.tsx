@@ -55,7 +55,7 @@ const App: React.FC = () => {
             placeholder="Type your message here..."
             className="message-input"
           />
-          <button type="submit" className="send-button">Send</button>
+          <button type="submit" className="send-button">Hello</button>
         </form>
       </div>
     </div>

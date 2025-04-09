@@ -48,25 +48,30 @@
   }
   
   .message-input {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 10px;
     font-size: 16px;
   }
   
   .send-button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  width: 30px; /* or any fixed width/height */
+  height: 25px;
+  background-color: white;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* remove padding so it stays perfectly round */
   }
   
   .send-button:hover {
-    background-color: #0056b3;
+    font-weight: 900;
   }
   
