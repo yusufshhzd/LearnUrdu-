@@ -5,6 +5,7 @@ import SimplePresent from './SimplePresent';
 import React from 'react';
 import { SidebarProvider, SidebarTrigger } from '../components/ui/sidebar';
 import { AppSidebar } from '../components/app-sidebar';
+import ChatBotWidget from '@/components/ChatBotWidget';
 
 function Tenses() {
 
@@ -175,6 +176,7 @@ function Tenses() {
         </Paper>
 
       </div>
+      <ChatBotWidget/>
     </SidebarProvider>
   );
 }
