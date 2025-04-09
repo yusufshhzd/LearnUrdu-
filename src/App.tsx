@@ -7,6 +7,7 @@ import SimplePast from './pages/SimplePast';
 import Tenses from './pages/Tenses';
 import Introduction from './pages/Introduction';
 import BasicSentenceStructure from './pages/BasicSentenceStructure';
+import ChatBot from './pages/ChatBot';
 import { SidebarProvider } from '@/components/ui/SidebarProvider';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/tenses" element={<Tenses />} />
         <Route path="/simple-present" element={<SimplePresent />} />
         <Route path="/simple-past" element={<SimplePast />} />
+        <Route path="/chat-bot" element={<ChatBot />} />
       </Routes>
     </SidebarProvider>
 

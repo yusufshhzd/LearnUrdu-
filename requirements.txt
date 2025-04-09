@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+langchain
+ollama
+python-multipart
+aiofiles
