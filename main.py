@@ -2,10 +2,13 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
-from chat import ask_llm
 import asyncio
+from chat import ask_llm
+
 
 app = FastAPI()
+
+
 
 # Enable CORS for frontend
 app.add_middleware(
@@ -29,18 +32,15 @@ async def chat(req: ChatRequest):
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})
 
-# GET /chat/stream — streaming using Server-Sent Events (SSE)
+# main.py
 @app.get("/chat/stream")
 async def stream_chat(request: Request, message: str):
     async def event_generator():
         try:
-            full = ask_llm(message)  # Get full response from LangChain
-
-            for chunk in full.split("\n"):
-                await asyncio.sleep(0.05)  # Simulate delay if needed
+            async for chunk in ask_llm(message):  # Stream response chunk by chunk
                 yield f"data: {chunk}\n\n"
-
         except Exception as e:
             yield f"data: [ERROR] {str(e)}\n\n"
 
     return StreamingResponse(event_generator(), media_type="text/event-stream")
+

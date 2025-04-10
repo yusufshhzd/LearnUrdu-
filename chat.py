@@ -1,9 +1,11 @@
-from langchain.llms import Ollama
+from langchain_ollama.llms import OllamaLLM
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationBufferMemory
+from langchain.callbacks.base import AsyncCallbackHandler
+from typing import AsyncGenerator
 
 # Initialize Ollama. make sure its running
-llm = Ollama(model="llama3")
+llm = OllamaLLM(model="llama3", stream=True)
 
 # Setup memory and conversation chain
 memory = ConversationBufferMemory()

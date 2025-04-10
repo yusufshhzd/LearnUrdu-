@@ -151,7 +151,7 @@ const ChatBotWidget: React.FC = () => {
 
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
+                <div className="bg-gray-100 text-gray-800 p-3 rounded-lg animate-pulse">
                   . . .
                 </div>
               </div>
