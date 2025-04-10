@@ -9,7 +9,6 @@ from chat import ask_llm
 app = FastAPI()
 
 
-
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
