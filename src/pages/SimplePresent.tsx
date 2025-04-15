@@ -1,4 +1,4 @@
-import { Typography, Paper } from '@mui/material';
+import { Typography, Paper, ListItem, List } from '@mui/material';
 import ConjugationTable from '../components/ConjugationTable';
 import React, { useContext } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
@@ -48,7 +48,32 @@ export const SimplePresent = () => {
             </div>
           </Paper>
 
+          <div className='rowDisplay'>
 
+          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1/2, marginTop: '50px' }}>
+                <div className="tenseCard">
+                  <Typography variant="h5">Examples</Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>I eat roti</b><br /> <i>Mai roti khata hoon</i> <br /></Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>She reads a book</b><br /> <i>Wo kitaab parhti hai</i> <br /></Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>We play cricket</b><br /> <i>Hum cricket kheltay hain</i> <br /></Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>You do not sleep</b><br /> <i>Aap nahi sotay hain</i> <br /></Typography>
+                </div>
+              </Paper>
+
+              <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1/2, marginTop: '50px' }}>
+                <div className="tenseCard">
+                  <Typography variant="h5">Forming Questions</Typography>
+                  <Typography variant="h6">Add "kya" to the beginning</Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you go to work? (female)</b><br /> <i>Kya tum kaam par jaati ho?</i> <br /></Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>Does he run?</b><br /> <i>Kya wo bhaagta hai?</i> <br /></Typography>
+                  <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you drink tea?</b><br /> <i>Kya aap chai peeti hain?</i> <br /></Typography>
+                </div>
+              </Paper>
+
+
+
+          </div>
+          
 
 
 

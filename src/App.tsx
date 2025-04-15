@@ -10,6 +10,7 @@ import BasicSentenceStructure from './pages/BasicSentenceStructure';
 // import ChatBot from './pages/ChatBot';
 import { SidebarProvider } from '@/components/ui/SidebarProvider';
 import Hona from './pages/Hona';
+import PresentContinous from './pages/PresentContinous';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path="/simple-present" element={<SimplePresent />} />
         <Route path="/simple-past" element={<SimplePast />} />
         <Route path="/hona" element={<Hona />} />
+        <Route path="/present-continuous" element={<PresentContinous />} />
+
         {/* <Route path="/chat-bot" element={<ChatBot />} /> */}
       </Routes>
     </SidebarProvider>
