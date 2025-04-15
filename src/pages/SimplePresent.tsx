@@ -30,15 +30,7 @@ export const SimplePresent = () => {
         <SidebarTrigger />
         <div className="rightOfSidebar">
           <Typography variant="h4">Simple Present Tense</Typography>
-
-          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
-            <div className='tenseCard'>
-              <Typography variant="h5">Sentence Structure: [Subject] + [Verb Root] + [Ending]</Typography>
-              <ConjugationTable data={data1} />
-            </div>
-          </Paper>
-
-
+          
           <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 8, marginTop: '50px' }} >
             <div className='tenseCard'>
               <Typography variant="h5">What is the Simple Present Tense?</Typography>
@@ -47,6 +39,16 @@ export const SimplePresent = () => {
               <Typography style={{ textAlign: "center" }} variant="h6">✅ Routines<br /> <i>Woh school jaati hai</i> <br /> <i>She goes to school</i></Typography>
             </div>
           </Paper>
+
+          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
+            <div className='tenseCard'>
+              <Typography variant="h5">Sentence Structure: [Subject] + [Verbal Stem] + [Ending]</Typography>
+              <Typography variant="h6">The ending depends on the number and gender of the <i>subject</i></Typography>
+              <ConjugationTable data={data1} />
+            </div>
+          </Paper>
+
+
 
 
 

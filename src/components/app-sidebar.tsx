@@ -22,6 +22,10 @@ const data = {
       url: "introduction",
       items: [
         {
+          title: "Hona - \"To Be\"",
+          url: "hona",
+        },
+        {
           title: "Basic Sentence Structure",
           url: "basic-sentence-structure",
         }
