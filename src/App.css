@@ -107,7 +107,7 @@
   row-gap: 2rem;
 }
 
-.paperColumns {
+.rowDisplay {
   display: flex;
   justify-content: space-between;
   gap: 4rem;

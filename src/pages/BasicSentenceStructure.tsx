@@ -15,7 +15,7 @@ const BasicSentenceStructure = () => {
           <Typography sx={{ marginTop: "10px" }} variant="h6">Now we want to insert an object between the pronoun and verb ending to create a complete sentence</Typography>
 
 
-          <div className="paperColumns">
+          <div className="rowDisplay">
             {/* LEFT SIDE */}
             <div className="leftColumn">
               <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: '100%', marginTop: '50px' }}>
