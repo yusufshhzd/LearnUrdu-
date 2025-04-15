@@ -83,10 +83,10 @@ function Tenses() {
             <div className='buttonTenseDiv'>
               <ContainedButton text={"Simple\nPast"} onClick={() => navigate('/simple-past')} />
               <div className='exampleTense'>
-                "I ate food"
+                <Typography>"I ate food"</Typography>
               </div>
               <div className='exampleTense'>
-                "Mai ne khana khaya"
+                <Typography>"Mai ne khana khaya"</Typography>
               </div>
             </div>
 
@@ -135,10 +135,10 @@ function Tenses() {
             <div className='buttonTenseDiv'>
               <ContainedButton text={"Simple\nFuture"} onClick={undefined} />
               <div className='exampleTense'>
-                "I will eat food"
+                <Typography>"I will eat food"</Typography>
               </div>
               <div className='exampleTense'>
-                "Mai khana khaoonga"
+                <Typography>"Mai khana khaoonga"</Typography>
               </div>
             </div>
 
