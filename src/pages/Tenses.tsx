@@ -38,12 +38,12 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Present\nContinuous"} onClick={undefined} />
+              <ContainedButton text={"Present\nContinuous"} onClick={() => navigate('/present-continuous')} />
               <div className='exampleTense'>
-                "Example"
+              <Typography>"I am eating food"</Typography>
               </div>
               <div className='exampleTense'>
-                "Example"
+              <Typography>"Mai khana kha raha hoon"</Typography>
               </div>
             </div>
 
