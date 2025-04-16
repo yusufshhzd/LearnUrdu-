@@ -14,7 +14,6 @@ import {
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
 const data = {
   navMain: [
     {
@@ -58,8 +57,20 @@ const data = {
         },
       ],
     },
+    {
+      title: "Other",
+      url: "#",
+      items: [
+        {
+          title: "Postpositions",
+          url: "postpositions",
+        },
+      ],
+    },
   ],
 }
+
+
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (

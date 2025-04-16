@@ -176,7 +176,6 @@ function Tenses() {
         </Paper>
 
       </div>
-      <ChatBotWidget/>
     </SidebarProvider>
   );
 }

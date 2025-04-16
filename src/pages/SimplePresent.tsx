@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { SidebarContext, SidebarContextProps } from "@/components/ui/sidebar"
+import ChatBotWidget from '@/components/ChatBotWidget';
 
 
 export const SimplePresent = () => {
@@ -69,26 +70,10 @@ export const SimplePresent = () => {
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you drink tea?</b><br /> <i>Kya aap chai peeti hain?</i> <br /></Typography>
                 </div>
               </Paper>
-
-
-
           </div>
-          
-
-
-
-
-
         </div>
       </SidebarProvider>
-
-
     </div>
-
-
-
-
-
   );
 }
 
