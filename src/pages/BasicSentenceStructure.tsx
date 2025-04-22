@@ -19,14 +19,14 @@ const BasicSentenceStructure = () => {
             {/* LEFT SIDE */}
             <div className="leftColumn">
               <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: '100%', marginTop: '50px' }}>
-                <div className="tenseCard">
+                <div className="card">
                 <Typography variant="h5">Sentence Structure</Typography>
                   <Typography variant="h6">[Subject] + [Object] + [Verb]</Typography>
                 </div>
               </Paper>
 
               <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: '100%', marginTop: '50px' }}>
-                <div className="tenseCard">
+                <div className="card">
                   <Typography variant="h5">Examples</Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>I am Yusuf</b><br /> <i>Mai Yusuf hoon</i> <br />
                     <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
@@ -63,14 +63,14 @@ const BasicSentenceStructure = () => {
             {/* RIGHT SIDE */}
             <div className="rightColumn">
               <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: '100%', marginTop: '50px' }}>
-                <div className="tenseCard">
+                <div className="card">
                   <Typography variant="h5">Sentence Structure Including Negatives</Typography>
                   <Typography variant="h6">[Subject] + [Object] + <i>Nahi</i> + [Verb]</Typography>
                 </div>
               </Paper>
 
               <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: '100%', marginTop: '50px' }}>
-                <div className="tenseCard">
+                <div className="card">
                   <Typography variant="h5">Examples</Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>I am not Ali</b><br /> <i>Mai Ali nahi hoon</i> <br />
                     <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>

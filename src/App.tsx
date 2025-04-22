@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { WelcomePage } from './pages/WelcomePage';
 import SimplePresent from './pages/SimplePresent';
 import './App.css';
-import React from 'react';
+import React, { createContext } from 'react';
 import SimplePast from './pages/SimplePast';
 import Tenses from './pages/Tenses';
 import Introduction from './pages/Introduction';
@@ -13,6 +13,8 @@ import Hona from './pages/Hona';
 import PresentContinous from './pages/PresentContinous';
 import Postpositions from './pages/Postpositions';
 import ChatBotWidget from './components/ChatBotWidget';
+import { SupabaseClient, createClient } from '@supabase/supabase-js';
+
 
 
 function App() {

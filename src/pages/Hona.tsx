@@ -32,7 +32,7 @@ const Hona = () => {
 
 
                             <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 5 / 8, marginTop: '50px' }} >
-                                <div className='tenseCard'>
+                                <div className='card'>
                                     <Typography variant="h5">Hona Conjugations</Typography>
                                     <Typography variant="h6">[Pronoun] + [Verb Ending]</Typography>
                                     <ConjugationTable data={data1} />
