@@ -144,7 +144,7 @@ const Postpositions = () => {
                     </div>
 
                     {/* Flashcards*/}
-                    <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
+                    <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
                         <div className='card'>
                             <Typography variant="h5">Study Postpositions</Typography>
                             <FlashcardArray cycle={true} cards={cards} />
