@@ -111,6 +111,7 @@ const Postpositions = () => {
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Se</Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>We are <b>from</b> Pakistan</i><br/><i></i><i>Hum Pakistan <b>se</b> hain</i></Typography>
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
@@ -124,11 +125,13 @@ const Postpositions = () => {
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Ke saath</Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I am <b>with</b> mother</i><br/><i></i><i>Mai Ami <b>ke saath</b> hoon</i></Typography>
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Ke liye</Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>That is <b>for</b> Yusuf</i><br/><i></i><i>Wo Yusuf <b>ke liye</b> hai</i></Typography>
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
@@ -145,7 +148,7 @@ const Postpositions = () => {
 
                     {/* Flashcards*/}
                     <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
-                        <div className='card'>
+                        <div className='card' >
                             <Typography variant="h5">Study Postpositions</Typography>
                             <FlashcardArray cycle={true} cards={cards} />
                         </div>
