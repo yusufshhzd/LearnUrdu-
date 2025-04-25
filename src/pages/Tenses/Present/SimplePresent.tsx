@@ -1,5 +1,5 @@
 import { Typography, Paper, ListItem, List } from '@mui/material';
-import ConjugationTable from '../components/ConjugationTable';
+import ConjugationTable from '../../../components/ConjugationTable';
 import React, { useContext, useEffect, useState } from 'react';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';

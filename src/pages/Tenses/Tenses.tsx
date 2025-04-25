@@ -1,10 +1,10 @@
 import { Stack, Typography, Card, CardContent, Paper } from '@mui/material';
-import ContainedButton from '../components/ContainedButton';
+import ContainedButton from '../../components/ContainedButton';
 import { useNavigate } from 'react-router-dom';
-import SimplePresent from './SimplePresent';
+import SimplePresent from './Present/SimplePresent';
 import React from 'react';
-import { SidebarProvider, SidebarTrigger } from '../components/ui/sidebar';
-import { AppSidebar } from '../components/app-sidebar';
+import { SidebarProvider, SidebarTrigger } from '../../components/ui/sidebar';
+import { AppSidebar } from '../../components/app-sidebar';
 import ChatBotWidget from '@/components/ChatBotWidget';
 
 function Tenses() {
@@ -50,7 +50,7 @@ function Tenses() {
 
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Present\nPerfect"} onClick={undefined} />
+              <ContainedButton text={"Present\nPerfect"} onClick={() => navigate('/present-perfect')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -60,7 +60,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Present\nPerfect\nContinuous"} onClick={undefined} />
+              <ContainedButton text={"Present\nPerfect\nContinuous"} onClick={() => navigate('/present-perfect-continuous')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -91,7 +91,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Past\nContinuous"} onClick={undefined} />
+              <ContainedButton text={"Past\nContinuous"} onClick={() => navigate('/past-continuous')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -101,7 +101,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Past\nPerfect"} onClick={undefined} />
+              <ContainedButton text={"Past\nPerfect"} onClick={() => navigate('/past-perfect')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -111,7 +111,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Past\nPerfect\nContinuous"} onClick={undefined} />
+              <ContainedButton text={"Past\nPerfect\nContinuous"} onClick={() => navigate('/past-perfect-continuous')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -133,7 +133,7 @@ function Tenses() {
           <div className='tenses'>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Simple\nFuture"} onClick={undefined} />
+              <ContainedButton text={"Simple\nFuture"} onClick={() => navigate('/simple-future')} />
               <div className='exampleTense'>
                 <Typography>"I will eat food"</Typography>
               </div>
@@ -143,7 +143,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Future\nContinuous"} onClick={undefined} />
+              <ContainedButton text={"Future\nContinuous"} onClick={() => navigate('/future-continuous')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -153,7 +153,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Future\nPerfect"} onClick={undefined} />
+              <ContainedButton text={"Future\nPerfect"} onClick={() => navigate('/future-perfect')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -163,7 +163,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Future\nPerfect\nContinuous"} onClick={undefined} />
+              <ContainedButton text={"Future\nPerfect\nContinuous"} onClick={() => navigate('/future-perfect-continuous')} />
               <div className='exampleTense'>
                 Example
               </div>
