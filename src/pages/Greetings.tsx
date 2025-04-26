@@ -19,6 +19,7 @@ const Greetings: React.FC = () => {
         ['Hello', 'Aadaab'],
         ['Hello/Goodbye/Peace be upon you', 'Assalam Alaikum'],
         ['Hello/Goodbye/And peace be upon you', 'Walaikum Assalam'],
+        ['Goodbye', 'Khuda hafiz'],
         ['What', 'kya'],
         ['Condition/Situation', 'haal'],
         ['How are you (informal)', 'kyaa haal hai?'],
@@ -51,30 +52,43 @@ const Greetings: React.FC = () => {
     ];
 
 
-    const [messages, setMessages] = useState<Message[]>([
-        { sender: 'sender', text: 'Assalamu Aleikum', translation: 'Peace be upon you' }, 
-        { sender: 'receiver', text: 'Walaikum Assalam!', translation: 'And peace be upon you!'  },
-        { sender: 'sender', text: 'Aapka naam kya hai?', translation: 'What is your name?'  },
-        { sender: 'receiver', text: 'Mera naam Yusuf hai. Aur aapka?', translation: 'My name is Yusuf. And yours?'  },
+    const [formalMessages] = useState<Message[]>([
+        { sender: 'sender', text: 'Assalamu Aleikum', translation: 'Peace be upon you' },
+        { sender: 'receiver', text: 'Walaikum Assalam!', translation: 'And peace be upon you!' },
+        { sender: 'sender', text: 'Aapka naam kya hai?', translation: 'What is your name?' },
+        { sender: 'receiver', text: 'Mera naam Yusuf hai. Aur aapka?', translation: 'My name is Yusuf. And yours?' },
         { sender: 'sender', text: 'Mera naam Esha hai', translation: 'My name is Esha' },
-        { sender: 'receiver', text: 'Aap kahaan se hain?', translation: 'Where are you from?'  },
-        { sender: 'sender', text: 'Mai Michigan se hoon. Aap kahan se hain?', translation: 'I am from Michigan. Where are you from?'  },
-        { sender: 'receiver', text: 'Mai Ohio se hoon', translation: 'I am from Ohio'  },
-        { sender: 'sender', text: 'Aap kitane saal ki hain?', translation: 'How old are you?'  },
-        { sender: 'receiver', text: 'Mai biis saal kii hoon. Aur aapkii umar kitani hai?', translation: 'I am 20. What is your age?'  },
-        { sender: 'sender', text: 'Aapka major kya hai?', translation: 'What is your major?'  },
-        { sender: 'receiver', text: 'Mera major computer science hai. Aur aapka?', translation: 'My major is computer science. And yours?'  },
-        { sender: 'sender', text: 'Mera major neuroscience hai.', translation: 'My major is neuroscience.'  },
-        { sender: 'receiver', text: 'Ye ladka kaun hai?', translation: 'Who is this boy?'  },
-        { sender: 'sender', text: 'Ye Ali hai', translation: 'This is Ali'  },
-        { sender: 'receiver', text: 'Assalamu Aleikum Ali!', translation: 'Peace be upon you Ali!'  },
-        { sender: 'third', text: 'Walaikum Assalam! Aap kesay hain?', translation: 'Peace be upon you too! How are you?'  },
-        { sender: 'receiver', text: 'Sab theek hai. Kahan rehtay hain aap?' , translation: 'All is well. Where do you live?'  },
-        { sender: 'third', text: 'Mai Chicago mein rehta hoon.', translation: 'I live in Chicago.'  },
-        { sender: 'receiver', text: 'Acha. Mai dukhan ja raha hoon. Aap se milkr khushi hoi!', translation: 'Okay. I am going to the store now. Nice to meet you! '  },
-        { sender: 'third', text: 'Aap se milkr khushi hoi!', translation: 'Nice to meet you!'},
-        { sender: 'receiver', text: 'Salaam Esha. Phir milenge.', translation: 'Bye Esha. Until we meet again.'},
-        { sender: 'sender', text: 'Walaikum Assalam!', translation: 'Goodbye!'},]); // Array to store messages for chat display
+        { sender: 'receiver', text: 'Aap kahaan se hain?', translation: 'Where are you from?' },
+        { sender: 'sender', text: 'Mai Michigan se hoon. Aap kahan se hain?', translation: 'I am from Michigan. Where are you from?' },
+        { sender: 'receiver', text: 'Mai Ohio se hoon', translation: 'I am from Ohio' },
+        { sender: 'sender', text: 'Aap kitane saal ki hain?', translation: 'How old are you?' },
+        { sender: 'receiver', text: 'Mai biis saal kii hoon. Aur aapkii umar kitani hai?', translation: 'I am 20. What is your age?' },
+        { sender: 'sender', text: 'Aapka major kya hai?', translation: 'What is your major?' },
+        { sender: 'receiver', text: 'Mera major computer science hai. Aur aapka?', translation: 'My major is computer science. And yours?' },
+        { sender: 'sender', text: 'Mera major neuroscience hai.', translation: 'My major is neuroscience.' },
+        { sender: 'receiver', text: 'Ye ladka kaun hai?', translation: 'Who is this boy?' },
+        { sender: 'sender', text: 'Ye Ali hai', translation: 'This is Ali' },
+        { sender: 'receiver', text: 'Assalamu Aleikum Ali!', translation: 'Peace be upon you Ali!' },
+        { sender: 'third', text: 'Walaikum Assalam! Aap kesay hain?', translation: 'Peace be upon you too! How are you?' },
+        { sender: 'receiver', text: 'Mai theek hoon. Kahan rehtay hain aap?', translation: 'All is well. Where do you live?' },
+        { sender: 'third', text: 'Mai Chicago mein rehta hoon.', translation: 'I live in Chicago.' },
+        { sender: 'receiver', text: 'Acha. Mai class ja raha hoon. Aap se milkr khushi hoi!', translation: 'Okay. I am going to class now. Nice to meet you! ' },
+        { sender: 'third', text: 'Aap se milkr khushi hoi!', translation: 'Nice to meet you!' },
+        { sender: 'receiver', text: 'Khuda hafiz Esha. Phir milenge.', translation: 'Bye Esha. Until we meet again.' },
+        { sender: 'sender', text: 'Khuda hafiz!', translation: 'Goodbye!' },]); // Array to store messages for chat display
+
+
+    const [informalMessages] = useState<Message[]>([
+        { sender: 'sender', text: 'Salaam!', translation: 'Hello!' },
+        { sender: 'receiver', text: 'Salaam!', translation: 'Hello!' },
+        { sender: 'sender', text: 'Kya haal hai?', translation: 'How are you?' },
+        { sender: 'receiver', text: 'Sab theek hai. Aur tum?', translation: 'All is well. And you?' },
+        { sender: 'sender', text: 'Class chalen?', translation: 'Should we go to class?' },
+        { sender: 'receiver', text: 'Chalo', translation: 'Lets go' },
+        { sender: 'sender', text: 'Acha. Phir milenge. Khuda hafiz.', translation: 'Okay. See you later. Bye.' },
+        { sender: 'receiver', text: 'Theek hai. Khuda hafiz.', translation: 'Okay. Bye.' },]); // Array to store messages for chat display
+
+
     return (
         <div>
 
@@ -100,37 +114,75 @@ const Greetings: React.FC = () => {
                         </div>
                     </Paper>
 
-                    <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
-                        <div className='card'>
-                            <Typography variant="h5">Example Conversation</Typography>
-                            <div className="conversation-container">
-                                <div className="chat-window">
-                                    <div className="messages">
-                                        {/* Display messages */}
-                                        {messages.map((message, index) => (
-                                            <div
-                                                key={index}
-                                                className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"}`}
-                                            >
+                    <div className='rowDisplay'>
+
+
+
+                        <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
+                            <div className='card'>
+                                <Typography variant="h5">Example Formal Conversation</Typography>
+                                <div className="conversation-container">
+                                    <div className="chat-window">
+                                        <div className="messages">
+                                            {/* Display messages */}
+                                            {formalMessages.map((message, index) => (
                                                 <div
-                                                    className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender" ? "bg-blue-500 text-white rounded-br-none" : message.sender === "receiver" ? "bg-gray-100 text-gray-800 rounded-bl-none" : "bg-green-100 text-gray-800 rounded-bl-none"
-                                                        }`}
+                                                    key={index}
+                                                    className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"}`}
                                                 >
-                                                    {message.text}<br />
-                                                    <div className='chatTranslation'>
-                                                    <i>{message.translation}</i>
+                                                    <div
+                                                        className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender" ? "bg-blue-500 text-white rounded-br-none" : message.sender === "receiver" ? "bg-gray-100 text-gray-800 rounded-bl-none" : "bg-green-100 text-gray-800 rounded-bl-none"
+                                                            }`}
+                                                    >
+                                                        {message.text}<br />
+                                                        <div className='chatTranslation'>
+                                                            <i>{message.translation}</i>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        ))}
+                                            ))}
 
+
+                                        </div>
 
                                     </div>
-
                                 </div>
                             </div>
-                        </div>
-                    </Paper>
+                        </Paper>
+
+                        <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
+                            <div className='card'>
+                                <Typography variant="h5">Example Informal Conversation</Typography>
+                                <div className="conversation-container">
+                                    <div className="chat-window">
+                                        <div className="messages">
+                                            {/* Display messages */}
+                                            {informalMessages.map((message, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"}`}
+                                                >
+                                                    <div
+                                                        className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender" ? "bg-blue-500 text-white rounded-br-none" : message.sender === "receiver" ? "bg-gray-100 text-gray-800 rounded-bl-none" : "bg-green-100 text-gray-800 rounded-bl-none"
+                                                            }`}
+                                                    >
+                                                        {message.text}<br />
+                                                        <div className='chatTranslation'>
+                                                            <i>{message.translation}</i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </Paper>
+
+                    </div>
 
 
                 </div>
