@@ -1,22 +1,18 @@
-import { Typography, Paper, ListItem, List } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState, FormEvent } from 'react';
+import axios from 'axios';
+import '../css/ChatBot.css'; // Custom styles for the chatbot
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
-import { SidebarContext, SidebarContextProps } from "@/components/ui/sidebar"
-import ChatBotWidget from '@/components/ChatBotWidget';
-import { SupabaseClient } from '@supabase/supabase-js';
+import { Paper, Typography } from '@mui/material';
 import ConjugationTable from '@/components/ConjugationTable';
 
 interface Message {
-    sender: 'user' | 'bot';
+    sender: 'sender' | 'receiver' | 'third';
     text: string;
-  }
+    translation: string;
+}
 
 const Greetings: React.FC = () => {
-
-    const Messages = useState<Message[]>([]); // messages for chat display
-
-
 
     const greetings = [
         ['English', 'Urdu'],
@@ -54,15 +50,27 @@ const Greetings: React.FC = () => {
     ];
 
 
+    const [messages, setMessages] = useState<Message[]>([
+        { sender: 'sender', text: 'Assalamu Aleikum', translation: 'Peace be upon you' }, 
+        { sender: 'receiver', text: 'Walaikum Assalam!', translation: 'And peace be upon you!'  },
+        { sender: 'sender', text: 'Aapka naam kya hai?', translation: 'What is your name?'  },
+        { sender: 'receiver', text: 'Mera naam Yusuf hai. Aur aapka?', translation: 'My name is Yusuf. And yours?'  },
+        { sender: 'sender', text: 'Mera naam Esha hai', translation: 'My name is Esha' },
+        { sender: 'receiver', text: 'Aap kahaan se hain?', translation: 'Where are you from?'  },
+        { sender: 'sender', text: 'Mai Michigan se hoon. Aap kahan se hain?', translation: 'I am from Michigan. Where are you from?'  },
+        { sender: 'receiver', text: 'Mai Ohio se hoon', translation: 'I am from Ohio'  },
+        { sender: 'sender', text: 'Aap kitane saal ki hain?', translation: 'How old are you?'  },
+        { sender: 'receiver', text: 'Mai biis saal kii hoon. Aur aapkii umar kitani hai?', translation: 'I am 20. What is your age?'  },
+        { sender: 'sender', text: 'Aapka major kya hai?', translation: 'What is your major?'  },
+        { sender: 'receiver', text: 'Mera major computer science hai. Aur aapka?', translation: 'My major is computer science. And yours?'  },
+        { sender: 'sender', text: 'Mera major neuroscience hai.', translation: 'My major is neuroscience.'  },]); // Array to store messages for chat display
     return (
-
-
-
         <div>
 
             <SidebarProvider>
                 <AppSidebar />
                 <SidebarTrigger />
+
                 <div className="rightOfSidebar">
                     <Typography variant="h4">Greetings and Introductions</Typography>
 
@@ -81,30 +89,48 @@ const Greetings: React.FC = () => {
                         </div>
                     </Paper>
 
-
                     <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
                         <div className='card'>
                             <Typography variant="h5">Example Conversation</Typography>
-                            <div className="chatbot-container">
+                            <div className="conversation-container">
                                 <div className="chat-window">
                                     <div className="messages">
                                         {/* Display messages */}
-                                         {messages.map((msg, index) => (
-                                            <div key={index} className={`message ${msg.sender}`}>
-                                                <p>{msg.text}</p>
+                                        {messages.map((message, index) => (
+                                            <div
+                                                key={index}
+                                                className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"
+                                                    }`}
+                                            >
+                                                <div
+                                                    className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender"
+                                                        ? "bg-blue-500 text-white rounded-br-none"
+                                                        : "bg-gray-100 text-gray-800 rounded-bl-none"
+                                                        }`}
+                                                >
+                                                    {message.text}<br />
+                                                    <div className='chatTranslation'>
+                                                    <i>{message.translation}</i>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        ))} 
+                                        ))}
+
+
                                     </div>
+
                                 </div>
                             </div>
-
-
                         </div>
                     </Paper>
 
+
                 </div>
             </SidebarProvider>
+
         </div>
+
+
     );
 }
 

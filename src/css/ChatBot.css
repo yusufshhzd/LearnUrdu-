@@ -74,4 +74,11 @@
   .send-button:hover {
     font-weight: 900;
   }
+
+  .conversation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f9;
+  }
   
