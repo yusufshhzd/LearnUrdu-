@@ -17,8 +17,8 @@ const Greetings: React.FC = () => {
     const greetings = [
         ['English', 'Urdu'],
         ['Hello', 'Aadaab'],
-        ['Peace be upon you', 'Assalam Alaikum'],
-        ['And peace be upon you', 'Walaikum Assalam'],
+        ['Hello/Goodbye/Peace be upon you', 'Assalam Alaikum'],
+        ['Hello/Goodbye/And peace be upon you', 'Walaikum Assalam'],
         ['What', 'kya'],
         ['Condition/Situation', 'haal'],
         ['How are you (informal)', 'kyaa haal hai?'],
@@ -28,6 +28,7 @@ const Greetings: React.FC = () => {
         ['Again', 'phir'],
         ['To meet/see', 'milna'],
         ['Until we meet again', 'phir milenge'],
+        ['It was good to meet you', 'Aap se milkr khushi hoi'],
     ];
 
 
@@ -63,7 +64,17 @@ const Greetings: React.FC = () => {
         { sender: 'receiver', text: 'Mai biis saal kii hoon. Aur aapkii umar kitani hai?', translation: 'I am 20. What is your age?'  },
         { sender: 'sender', text: 'Aapka major kya hai?', translation: 'What is your major?'  },
         { sender: 'receiver', text: 'Mera major computer science hai. Aur aapka?', translation: 'My major is computer science. And yours?'  },
-        { sender: 'sender', text: 'Mera major neuroscience hai.', translation: 'My major is neuroscience.'  },]); // Array to store messages for chat display
+        { sender: 'sender', text: 'Mera major neuroscience hai.', translation: 'My major is neuroscience.'  },
+        { sender: 'receiver', text: 'Ye ladka kaun hai?', translation: 'Who is this boy?'  },
+        { sender: 'sender', text: 'Ye Ali hai', translation: 'This is Ali'  },
+        { sender: 'receiver', text: 'Assalamu Aleikum Ali!', translation: 'Peace be upon you Ali!'  },
+        { sender: 'third', text: 'Walaikum Assalam! Aap kesay hain?', translation: 'Peace be upon you too! How are you?'  },
+        { sender: 'receiver', text: 'Sab theek hai. Kahan rehtay hain aap?' , translation: 'All is well. Where do you live?'  },
+        { sender: 'third', text: 'Mai Chicago mein rehta hoon.', translation: 'I live in Chicago.'  },
+        { sender: 'receiver', text: 'Acha. Mai dukhan ja raha hoon. Aap se milkr khushi hoi!', translation: 'Okay. I am going to the store now. Nice to meet you! '  },
+        { sender: 'third', text: 'Aap se milkr khushi hoi!', translation: 'Nice to meet you!'},
+        { sender: 'receiver', text: 'Salaam Esha. Phir milenge.', translation: 'Bye Esha. Until we meet again.'},
+        { sender: 'sender', text: 'Walaikum Assalam!', translation: 'Goodbye!'},]); // Array to store messages for chat display
     return (
         <div>
 
@@ -99,13 +110,10 @@ const Greetings: React.FC = () => {
                                         {messages.map((message, index) => (
                                             <div
                                                 key={index}
-                                                className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"
-                                                    }`}
+                                                className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"}`}
                                             >
                                                 <div
-                                                    className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender"
-                                                        ? "bg-blue-500 text-white rounded-br-none"
-                                                        : "bg-gray-100 text-gray-800 rounded-bl-none"
+                                                    className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender" ? "bg-blue-500 text-white rounded-br-none" : message.sender === "receiver" ? "bg-gray-100 text-gray-800 rounded-bl-none" : "bg-green-100 text-gray-800 rounded-bl-none"
                                                         }`}
                                                 >
                                                     {message.text}<br />
