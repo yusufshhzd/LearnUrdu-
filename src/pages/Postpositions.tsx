@@ -30,7 +30,7 @@ const Postpositions = () => {
         },
         {
             id: 2,
-            frontHTML: <div className="flashcard">par</div>,
+            frontHTML: <div className="flashcard">par/pe</div>,
             backHTML: <div className="flashcard">on, at, to</div>,
         },
         {

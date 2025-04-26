@@ -23,8 +23,7 @@ import SimpleFuture from './pages/Tenses/Future/SimpleFuture';
 import FutureContinuous from './pages/Tenses/Future/FutureContinuous';
 import FuturePerfect from './pages/Tenses/Future/FuturePerfect';
 import FuturePerfectContinuous from './pages/Tenses/Future/FuturePerfectContinuous';
-
-
+import Greetings from './pages/Greetings';
 
 function App() {
   return (
@@ -53,6 +52,7 @@ function App() {
         <Route path="/future-perfect" element={<FuturePerfect />} />
         <Route path="/future-perfect-continuous" element={<FuturePerfectContinuous />} />
 
+        <Route path="/greetings-introductions" element={<Greetings />} />
 
         <Route path="/postpositions" element={<Postpositions />} />
 

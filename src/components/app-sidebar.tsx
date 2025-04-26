@@ -110,8 +110,8 @@ const data = {
       isActive: false,
       items: [
         {
-          title: "Common Phrases",
-          url: "#",
+          title: "Greetings & Introductions",
+          url: "greetings-introductions",
           isActive: false,
         },
       ],
