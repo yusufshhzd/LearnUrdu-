@@ -88,6 +88,18 @@ const Greetings: React.FC = () => {
         { sender: 'sender', text: 'Acha. Phir milenge. Khuda hafiz.', translation: 'Okay. See you later. Bye.' },
         { sender: 'receiver', text: 'Theek hai. Khuda hafiz.', translation: 'Okay. Bye.' },]); // Array to store messages for chat display
 
+        const [numberEmailMessages] = useState<Message[]>([
+            { sender: 'sender', text: 'Salaam Yusuf! Kya chal raha hai?', translation: 'Hello Yusuf. What is going on?' },
+            { sender: 'receiver', text: 'Salaam Esha! Sab theek hai. Aapka kya haal hai?', translation: 'Hello Esha! All is well. How are you?' },
+            { sender: 'sender', text: 'Sab theek hai. Acha, aapka email address kya hai?', translation: 'All is well. Okay, what is your email address?' },
+            { sender: 'receiver', text: 'Mera email yusuf@gmail.com hai. Aur aapka?', translation: 'My email address is yusuf@gmail.com. And yours?' },
+            { sender: 'sender', text: 'Mera email esha@gmail.com hai', translation: 'My email is esha@gmail.com' },
+            { sender: 'receiver', text: 'Aapka phone number kya hai?', translation: 'What is your phone number?' },
+            { sender: 'sender', text: 'Mera phone number 192.. hai. Aur aapka?', translation: 'My phone number is 192... And yours?' },
+            { sender: 'receiver', text: 'Mera phone number 614... hai.', translation: 'My phone number is 614...' },
+            { sender: 'sender', text: 'Shukriya. Phir milenge. Khuda hafiz', translation: 'Thank you. See you again. Bye.' },
+            { sender: 'receiver', text: 'Accha, khuda hafiz.', translation: 'Okar, bye.' },]); // Array to store messages for chat display
+
 
     return (
         <div>
@@ -152,12 +164,42 @@ const Greetings: React.FC = () => {
 
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
                             <div className='card'>
-                                <Typography variant="h5">Example Informal Conversation</Typography>
+                                <Typography variant="h5">Example Informal Conversations</Typography>
                                 <div className="conversation-container">
                                     <div className="chat-window">
                                         <div className="messages">
                                             {/* Display messages */}
                                             {informalMessages.map((message, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"}`}
+                                                >
+                                                    <div
+                                                        className={`max-w-[70%] p-3 rounded-lg ${message.sender === "sender" ? "bg-blue-500 text-white rounded-br-none" : "bg-gray-100 text-gray-800 rounded-bl-none"
+                                                            }`}
+                                                    >
+                                                        {message.text}<br />
+                                                        <div className='chatTranslation'>
+                                                            <i>{message.translation}</i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+
+
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div className='card'>
+                                <Typography variant="h5">Asking for number/email</Typography>
+                                <div className="conversation-container">
+                                    <div className="chat-window">
+                                        <div className="messages">
+                                            {/* Display messages */}
+                                            {numberEmailMessages.map((message, index) => (
                                                 <div
                                                     key={index}
                                                     className={`flex mb-2 ${message.sender === "sender" ? "justify-end" : "justify-start"}`}
@@ -178,6 +220,7 @@ const Greetings: React.FC = () => {
                                         </div>
 
                                     </div>
+                                    
                                 </div>
                             </div>
                         </Paper>
