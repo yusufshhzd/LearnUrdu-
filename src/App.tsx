@@ -24,6 +24,7 @@ import FutureContinuous from './pages/Tenses/Future/FutureContinuous';
 import FuturePerfect from './pages/Tenses/Future/FuturePerfect';
 import FuturePerfectContinuous from './pages/Tenses/Future/FuturePerfectContinuous';
 import Greetings from './pages/Greetings';
+import NounGenders from './pages/NounGenders';
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
         <Route path="/introduction" element={<Introduction />} />
         <Route path="/hona" element={<Hona />} />
         <Route path="/basic-sentence-structure" element={<BasicSentenceStructure />} />
+        <Route path="/noun-genders" element={<NounGenders />} />
+
 
         <Route path="/tenses" element={<Tenses />} />
 

@@ -12,7 +12,11 @@ const ConjugationTable = ({ data }: { data: any }) => {
         const isBold = row === 0 || col === 0;
         cells.push(
           <td key={col} className={isBold ? 'bold' : ''}>
-            {data[row][col]}
+            {typeof data[row][col] === 'string'
+              ? data[row][col].split('\n').map((line: string, idx: number) => (
+                  <div key={idx}>{line}</div>
+                ))
+              : data[row][col]}
           </td>
         );
       }

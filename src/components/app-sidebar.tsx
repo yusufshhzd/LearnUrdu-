@@ -33,6 +33,11 @@ const data = {
           title: "Basic Sentence Structure",
           url: "basic-sentence-structure",
           isActive: false,
+        },
+        {
+          title: "Noun Genders",
+          url: "noun-genders",
+          isActive: false,
         }
       ],
     },
