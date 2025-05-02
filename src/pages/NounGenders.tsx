@@ -12,12 +12,23 @@ export const NounGenders = () => {
 
 
 
-  const data1 = [
+  const nouns = [
     ['', 'Masculine', 'Feminine'],
-    ['Marked Nouns', 'Nouns that end in -a/-aa', 'Nouns that end in -i/-ii'],
-    ['Examples', 'ladkaa - "boy" \n kamaara - "room" \n bacha - "child boy"', 'ladki - "girl" \n kursi - "chair" \n bachii - "girl child"'],
-    ['Unmarked Nouns', 'Nouns that do not end in -a/-aa', 'Nouns that do not end in -i/-ii'],
-    ['Examples', 'ghar - "home" \n seb - "apple" \n phal - "fruit"', 'kitaab - "book" \n kamiiz - "shirt \n taswiir - "picture"']
+    ['Marked Nouns', 'Nouns that end in -a/', 'Nouns that end in -i'],
+    ['Examples', 'ladka - "boy" \n kamaara - "room" \n bacha - "child boy"', 'ladki - "girl" \n kursi - "chair" \n bachi - "girl child"'],
+    ['Unmarked Nouns', 'Nouns that do not end in -a', 'Nouns that do not end in -i'],
+    ['Examples', 'ghar - "home" \n seb - "apple" \n phal - "fruit"', 'kitaab - "book" \n kamiiz - "shirt" \n taswiir - "picture"']
+  ];
+
+
+  const pluralNouns = [
+    ['', 'Masculine', 'Feminine'],
+    ['Marked Nouns', 'Nouns that end in -a', 'Nouns that end in -i'],
+    ['Plural Rule', 'Change -a into -ay', 'Change -i into -iyan'],
+    ['Examples', 'ladka → ladkay \n kamaara → kamaaray \n bacha → bachay', 'ladki → ladkiyan \n kursi → kursiyan \n bachii → bachiyaan'],
+    ['Unmarked Nouns', 'Nouns that do not end in -a', 'Nouns that do not end in -i'],
+    ['Plural Rule', 'No changes in form', 'Add suffix "-yen"'],
+    ['Examples', 'ghar - "home" \n seb - "apple" \n phal - "fruit"', 'kitaab → kitaabyen \n kamiiz → kamiizyen  \n taswiir - taswiiryen']
   ];
 
 
@@ -42,9 +53,33 @@ export const NounGenders = () => {
 
           <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 4 / 4, marginTop: '50px' }} >
             <div className='card'>
-              <ConjugationTable data={data1} />
+              <Typography variant="h5">Noun Rules</Typography>
+              <ConjugationTable data={nouns} />
+
+              <Typography variant="h6"><i>These rules have many exceptions, such as:</i></Typography>
+              <Typography variant="h5">Nouns ending in -a/-aa, but are feminine:</Typography>
+              <Typography variant="h6">lataa - "leaf" <br />ghataa - "cloud"<br />dawaa - "medicine"<br />etc.</Typography>
+
+
+              <Typography variant="h5">Nouns ending in -i/-ii, but are masculine:</Typography>
+              <Typography variant="h6">saathi - "friend" <br />hathii - "elephant"<br />etc.</Typography>
             </div>
           </Paper>
+
+
+          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 4 / 4, marginTop: '50px' }} >
+            <div className='card'>
+              <Typography variant="h5">Plural Noun Rules</Typography>
+              <ConjugationTable data={pluralNouns} />
+
+              
+            </div>
+          </Paper>
+
+
+          
+
+
 
         </div>
       </SidebarProvider>

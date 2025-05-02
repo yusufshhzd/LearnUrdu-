@@ -65,7 +65,8 @@ export const SimplePresent = () => {
               <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1/2, marginTop: '50px' }}>
                 <div className="card">
                   <Typography variant="h5">Forming Questions</Typography>
-                  <Typography variant="h6">Add "kya" to the beginning</Typography>
+                  <Typography variant="h6">Add "kya" to the beginning </Typography>
+                  <Typography sx ={{fontSize: "1rem"}}><i>Note that here, the word "kya" does not mean "what"</i></Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you go to work? (female)</b><br /> <i>Kya tum kaam par jaati ho?</i> <br /></Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Does he run?</b><br /> <i>Kya wo bhaagta hai?</i> <br /></Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you drink tea?</b><br /> <i>Kya aap chai peeti hain?</i> <br /></Typography>
