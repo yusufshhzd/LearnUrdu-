@@ -5,6 +5,7 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { Paper, Typography } from '@mui/material';
 import ConjugationTable from '@/components/ConjugationTable';
+import ProgressBar from '@/components/ProgressBar/ProgressBar';
 
 interface Message {
     sender: 'sender' | 'receiver' | 'third';
@@ -88,17 +89,17 @@ const Greetings: React.FC = () => {
         { sender: 'sender', text: 'Acha. Phir milenge. Khuda hafiz.', translation: 'Okay. See you later. Bye.' },
         { sender: 'receiver', text: 'Theek hai. Khuda hafiz.', translation: 'Okay. Bye.' },]); // Array to store messages for chat display
 
-        const [numberEmailMessages] = useState<Message[]>([
-            { sender: 'sender', text: 'Salaam Yusuf! Kya chal raha hai?', translation: 'Hello Yusuf. What is going on?' },
-            { sender: 'receiver', text: 'Salaam Esha! Sab theek hai. Aapka kya haal hai?', translation: 'Hello Esha! All is well. How are you?' },
-            { sender: 'sender', text: 'Sab theek hai. Acha, aapka email address kya hai?', translation: 'All is well. Okay, what is your email address?' },
-            { sender: 'receiver', text: 'Mera email yusuf@gmail.com hai. Aur aapka?', translation: 'My email address is yusuf@gmail.com. And yours?' },
-            { sender: 'sender', text: 'Mera email esha@gmail.com hai', translation: 'My email is esha@gmail.com' },
-            { sender: 'receiver', text: 'Aapka phone number kya hai?', translation: 'What is your phone number?' },
-            { sender: 'sender', text: 'Mera phone number 192.. hai. Aur aapka?', translation: 'My phone number is 192... And yours?' },
-            { sender: 'receiver', text: 'Mera phone number 614... hai.', translation: 'My phone number is 614...' },
-            { sender: 'sender', text: 'Shukriya. Phir milenge. Khuda hafiz', translation: 'Thank you. See you again. Bye.' },
-            { sender: 'receiver', text: 'Accha, khuda hafiz.', translation: 'Okar, bye.' },]); // Array to store messages for chat display
+    const [numberEmailMessages] = useState<Message[]>([
+        { sender: 'sender', text: 'Salaam Yusuf! Kya chal raha hai?', translation: 'Hello Yusuf. What is going on?' },
+        { sender: 'receiver', text: 'Salaam Esha! Sab theek hai. Aapka kya haal hai?', translation: 'Hello Esha! All is well. How are you?' },
+        { sender: 'sender', text: 'Sab theek hai. Acha, aapka email address kya hai?', translation: 'All is well. Okay, what is your email address?' },
+        { sender: 'receiver', text: 'Mera email yusuf@gmail.com hai. Aur aapka?', translation: 'My email address is yusuf@gmail.com. And yours?' },
+        { sender: 'sender', text: 'Mera email esha@gmail.com hai', translation: 'My email is esha@gmail.com' },
+        { sender: 'receiver', text: 'Aapka phone number kya hai?', translation: 'What is your phone number?' },
+        { sender: 'sender', text: 'Mera phone number 192.. hai. Aur aapka?', translation: 'My phone number is 192... And yours?' },
+        { sender: 'receiver', text: 'Mera phone number 614... hai.', translation: 'My phone number is 614...' },
+        { sender: 'sender', text: 'Shukriya. Phir milenge. Khuda hafiz', translation: 'Thank you. See you again. Bye.' },
+        { sender: 'receiver', text: 'Accha, khuda hafiz.', translation: 'Okar, bye.' },]); // Array to store messages for chat display
 
 
     return (
@@ -107,10 +108,11 @@ const Greetings: React.FC = () => {
             <SidebarProvider>
                 <AppSidebar />
                 <SidebarTrigger />
-
                 <div className="rightOfSidebar">
+                    <ProgressBar />
+                  
                     <Typography variant="h4">Greetings and Introductions</Typography>
-
+                   
                     <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
                         <div className='card'>
                             <Typography variant="h5">Greetings Vocabulary</Typography>
@@ -190,7 +192,7 @@ const Greetings: React.FC = () => {
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div className='card'>
@@ -220,7 +222,7 @@ const Greetings: React.FC = () => {
                                         </div>
 
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </Paper>

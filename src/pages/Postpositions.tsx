@@ -1,4 +1,5 @@
 import ConjugationTable from '@/components/ConjugationTable'
+import ProgressBar from '@/components/ProgressBar/ProgressBar'
 import { AppSidebar } from '@/components/app-sidebar'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { Paper, Typography } from '@mui/material'
@@ -72,6 +73,8 @@ const Postpositions = () => {
                 <AppSidebar />
                 <SidebarTrigger />
                 <div className="rightOfSidebar">
+                <ProgressBar />
+
                     <Typography variant="h4">Postpositions</Typography>
 
                     <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >

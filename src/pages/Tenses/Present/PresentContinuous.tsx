@@ -1,4 +1,5 @@
 import ConjugationTable from '@/components/ConjugationTable'
+import ProgressBar from '@/components/ProgressBar/ProgressBar'
 import { AppSidebar } from '@/components/app-sidebar'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { Paper, Typography } from '@mui/material'
@@ -25,6 +26,8 @@ const PresentContinous = () => {
         <AppSidebar />
         <SidebarTrigger />
         <div className="rightOfSidebar">
+        <ProgressBar />
+
           <Typography variant="h4">Present Continuous Tense</Typography>
 
           <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 8, marginTop: '50px' }} >

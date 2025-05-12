@@ -3,6 +3,8 @@ import { AppSidebar } from '@/components/app-sidebar'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { List, ListItem, Paper, Typography } from '@mui/material'
 import React from 'react'
+import ProgressBar from '@/components/ProgressBar/ProgressBar';
+
 
 const SimplePast = () => {
 
@@ -46,6 +48,8 @@ const SimplePast = () => {
         <AppSidebar />
         <SidebarTrigger />
         <div className="rightOfSidebar">
+          <ProgressBar />
+
           <Typography variant="h4">Simple Past Tense</Typography>
 
           <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 8, marginTop: '50px' }} >
@@ -201,7 +205,7 @@ const SimplePast = () => {
                   <ListItem sx={{ display: 'list-item' }}>
                     <i>Saaf kara</i> - To clean
                   </ListItem>
-                 
+
                 </List>
 
 
@@ -218,7 +222,7 @@ const SimplePast = () => {
 
                 <Typography variant="h6">❗️You may use Keeya/Kara for masculine objects and Kee/karee for feminine objects. They are often used interchangeably.</Typography>
 
-                
+
               </div>
             </Paper>
           </div>

@@ -1,3 +1,4 @@
+import ProgressBar from '@/components/ProgressBar/ProgressBar'
 import { AppSidebar } from '@/components/app-sidebar'
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
 import { List, ListItem, Paper, Typography } from '@mui/material'
@@ -11,6 +12,8 @@ const BasicSentenceStructure = () => {
         <AppSidebar />
         <SidebarTrigger />
         <div className="rightOfSidebar">
+        <ProgressBar />
+
           <Typography variant="h4">Basic Sentence Structures</Typography>
           <Typography sx={{ marginTop: "10px" }} variant="h6">Now we want to insert an object between the pronoun and verb ending to create a complete sentence</Typography>
 
