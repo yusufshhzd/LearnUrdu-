@@ -1,8 +1,11 @@
 import React from 'react'
+import ProgressBar from '@/components/ProgressBar/ProgressBar';
+
 
 const Introduction = () => {
   return (
-    <div>
+    <div style={{ height: '200vh' }}>
+      <ProgressBar />
       Welcome
     </div>
   )

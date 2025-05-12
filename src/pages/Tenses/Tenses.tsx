@@ -7,6 +7,7 @@ import { SidebarProvider, SidebarTrigger } from '../../components/ui/sidebar';
 import { AppSidebar } from '../../components/app-sidebar';
 import ChatBotWidget from '@/components/ChatBotWidget';
 
+
 function Tenses() {
 
   const navigate = useNavigate();

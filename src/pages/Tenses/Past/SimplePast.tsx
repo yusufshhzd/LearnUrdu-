@@ -69,14 +69,14 @@ const SimplePast = () => {
                   </List>
 
                 </Typography>
-                <Typography style={{ textAlign: "center" }} variant="h6"><b>Intransitive</b> - Verbs that do not require an object <br /> <i>He woke up</i> <br /> <i>Wo jaaga</i> 
-                <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                <Typography style={{ textAlign: "center" }} variant="h6"><b>Intransitive</b> - Verbs that do not require an object <br /> <i>He woke up</i> <br /> <i>Wo jaaga</i>
+                  <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
                     <ListItem sx={{ display: 'list-item' }}>
                       The verb does not require an object
                     </ListItem>
                   </List>
-                
-                
+
+
                 </Typography>
 
 
@@ -139,7 +139,41 @@ const SimplePast = () => {
           </div>
 
 
-          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
+          <div className='rowDisplay'>
+            <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
+              <div className='card'>
+                <Typography variant="h5"><b>Hona - To Be / Happen / Become</b> (Transitive)</Typography>
+                <Typography variant="h6">This verb is often attached to adjectives and nouns to make verbs</Typography>
+                <Typography variant="h6">Mostly they consist of emotions/feelings like: </Typography>
+                <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>khush hona</i> - to be happy
+                  </ListItem>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>odas hona</i> - to be sad
+                  </ListItem>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>parishan hona</i> - to be worried
+                  </ListItem>
+                </List>
+                <Typography variant="h6">Now we can conjugate these in the past tense</Typography>
+                <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Mai parishan hoa</i> - I was worried
+                  </ListItem>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Wo odas hoee</i> - She was sad
+                  </ListItem>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Hum khush hoay</i> - We were happy
+                  </ListItem>
+                </List>
+                <Typography variant="h6">❗️Note that these do not follow the "-ya" suffix rule</Typography>
+              </div>
+            </Paper>
+
+
+            <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
               <div className='card'>
                 <Typography variant="h5"><b>Jaana - To go</b> (Intransitive)</Typography>
                 <Typography variant="h6">This verb is conjugated irregularly</Typography>
@@ -149,18 +183,45 @@ const SimplePast = () => {
                 <Typography style={{ textAlign: "center" }} variant="h6">They went to Pakistan <br /> <i>Wo Pakistan gaaey</i></Typography>
                 <Typography style={{ textAlign: "center" }} variant="h6">Your cat went where?<br /> <i>Tumhari billi kahan gaee?</i></Typography>
                 <Typography style={{ textAlign: "center" }} variant="h6">We went to India <br /> <i>Hum India gaaeen</i></Typography>
- 
               </div>
             </Paper>
+          </div>
 
-
-
-          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
+          <div className='rowDisplay'>
+            <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
               <div className='card'>
-                <Typography variant="h5"><b>Hona - To Be / Happen / Become</b> (Transitive)</Typography>
+                <Typography variant="h5"><b>Karna - To do</b> (Transitive)</Typography>
+                <Typography variant="h6">This verb is often attached to adjectives and nouns to make verbs</Typography>
+                <Typography variant="h5">Examples</Typography>
+
+                <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Maza karna</i> - To have fun
+                  </ListItem>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Saaf kara</i> - To clean
+                  </ListItem>
+                 
+                </List>
+
+
+                <Typography variant="h6">Now we can conjugate these in the past tense</Typography>
+                <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Hum ne maza karaa</i> - We had fun
+                  </ListItem>
+                  <ListItem sx={{ display: 'list-item' }}>
+                    <i>Mai ne gari saf karee</i> - I cleaned the car
+                  </ListItem>
+                </List>
+
+
+                <Typography variant="h6">❗️You may use Keeya/Kara for masculine objects and Kee/karee for feminine objects. They are often used interchangeably.</Typography>
+
                 
               </div>
             </Paper>
+          </div>
 
 
 

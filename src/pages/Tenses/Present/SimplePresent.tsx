@@ -6,6 +6,7 @@ import { AppSidebar } from '@/components/app-sidebar';
 import { SidebarContext, SidebarContextProps } from "@/components/ui/sidebar"
 import ChatBotWidget from '@/components/ChatBotWidget';
 import { SupabaseClient } from '@supabase/supabase-js';
+import ProgressBar from '@/components/ProgressBar/ProgressBar';
 
 
 export const SimplePresent = () => {
@@ -30,29 +31,32 @@ export const SimplePresent = () => {
       <SidebarProvider>
         <AppSidebar />
         <SidebarTrigger />
-        <div className="rightOfSidebar">
-          <Typography variant="h4">Simple Present Tense</Typography>
-          
-          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 8, marginTop: '50px' }} >
-            <div className='card'>
-              <Typography variant="h5">What is the Simple Present Tense?</Typography>
-              <Typography style={{ textAlign: "center" }} variant="h6">✅ Habits<br /> <i>Mai har roz chai peeta hoon</i> <br /> <i>I drink tea every day</i></Typography>
-              <Typography style={{ textAlign: "center" }} variant="h6">✅ Facts<br /> <i>Suraj purab se nikalta hai</i> <br /> <i>The sun rises in the east</i></Typography>
-              <Typography style={{ textAlign: "center" }} variant="h6">✅ Routines<br /> <i>Woh school jaati hai</i> <br /> <i>She goes to school</i></Typography>
-            </div>
-          </Paper>
 
-          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
-            <div className='card'>
-              <Typography variant="h5">Sentence Structure: [Subject] + [Verbal Stem] + [Ending]</Typography>
-              <Typography variant="h6">The ending depends on the number and gender of the <i>subject</i></Typography>
-              <ConjugationTable data={data1} />
-            </div>
-          </Paper>
+          <div className="rightOfSidebar">
+            <ProgressBar />
 
-          <div className='rowDisplay'>
+            <Typography variant="h4">Simple Present Tense</Typography>
 
-          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1/2, marginTop: '50px' }}>
+            <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 8, marginTop: '50px' }} >
+              <div className='card'>
+                <Typography variant="h5">What is the Simple Present Tense?</Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6">✅ Habits<br /> <i>Mai har roz chai peeta hoon</i> <br /> <i>I drink tea every day</i></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6">✅ Facts<br /> <i>Suraj purab se nikalta hai</i> <br /> <i>The sun rises in the east</i></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6">✅ Routines<br /> <i>Woh school jaati hai</i> <br /> <i>She goes to school</i></Typography>
+              </div>
+            </Paper>
+
+            <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
+              <div className='card'>
+                <Typography variant="h5">Sentence Structure: [Subject] + [Verbal Stem] + [Ending]</Typography>
+                <Typography variant="h6">The ending depends on the number and gender of the <i>subject</i></Typography>
+                <ConjugationTable data={data1} />
+              </div>
+            </Paper>
+
+            <div className='rowDisplay'>
+
+              <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }}>
                 <div className="card">
                   <Typography variant="h5">Examples</Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>I eat roti</b><br /> <i>Mai roti khata hoon</i> <br /></Typography>
@@ -62,18 +66,19 @@ export const SimplePresent = () => {
                 </div>
               </Paper>
 
-              <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1/2, marginTop: '50px' }}>
+              <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }}>
                 <div className="card">
                   <Typography variant="h5">Forming Questions</Typography>
                   <Typography variant="h6">Add "kya" to the beginning </Typography>
-                  <Typography sx ={{fontSize: "1rem"}}><i>Note that here, the word "kya" does not mean "what"</i></Typography>
+                  <Typography sx={{ fontSize: "1rem" }}><i>Note that here, the word "kya" does not mean "what"</i></Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you go to work? (female)</b><br /> <i>Kya tum kaam par jaati ho?</i> <br /></Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Does he run?</b><br /> <i>Kya wo bhaagta hai?</i> <br /></Typography>
                   <Typography style={{ textAlign: "center" }} variant="h6"><b>Do you drink tea?</b><br /> <i>Kya aap chai peeti hain?</i> <br /></Typography>
                 </div>
               </Paper>
+            </div>
           </div>
-        </div>
+
       </SidebarProvider>
     </div>
   );
