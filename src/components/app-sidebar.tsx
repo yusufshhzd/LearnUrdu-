@@ -1,159 +1,160 @@
 import * as React from "react"
-import { GalleryVerticalEnd } from "lucide-react"
-import { useState } from "react";
+import {
+  BookOpen,
+  Bot,
+  Command,
+  Frame,
+  LifeBuoy,
+  Map,
+  PieChart,
+  Send,
+  Settings2,
+  SquareTerminal,
+} from "lucide-react"
 
+import { NavMain } from "@/components/nav-main"
+import { NavProjects } from "@/components/nav-projects"
+import { NavSecondary } from "@/components/nav-secondary"
+import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
+  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
 
-
 const data = {
+  user: {
+    name: "LearnUrdu",
+    email: "m@example.com",
+    avatar: "/avatars/shadcn.jpg",
+  },
   navMain: [
     {
-      title: "Introduction",
-      url: "introduction",
-      isActive: false,
-
-      items: [
-        {
-          title: "Hona - \"To Be\"",
-          url: "hona",
-          isActive: false,
-        },
-        {
-          title: "Basic Sentence Structure",
-          url: "basic-sentence-structure",
-          isActive: false,
-        },
-        {
-          title: "Noun Genders",
-          url: "noun-genders",
-          isActive: false,
-        }
-      ],
-    },
-    {
-      title: "Tenses",
-      url: "tenses",
-      isActive: false,
-      items: [
-        {
-          title: "Simple Present",
-          url: "simple-present",
-          isActive: false,
-        },
-        {
-          title: "Present Continuous",
-          url: "present-continuous",
-          isActive: false, //this controls the highlight!!!!!!!
-        },
-        {
-          title: "Present Perfect",
-          url: "present-perfect",
-          isActive: false,
-        },
-        {
-          title: "Present Perfect Continuous",
-          url: "present-perfect-continuous",
-          isActive: false,
-        },
-        {
-          title: "Simple Past",
-          url: "simple-past",
-          isActive: false,
-        },
-        {
-          title: "Past Continuous",
-          url: "past-continuous",
-          isActive: false,
-        },
-        {
-          title: "Past Perfect",
-          url: "past-perfect",
-          isActive: false,
-        },
-        {
-          title: "Past Perfect Continuous",
-          url: "past-perfect-continuous",
-          isActive: false,
-        },
-        {
-          title: "Simple Future",
-          url: "simple-future",
-          isActive: false,
-        },
-        {
-          title: "Future Continuous",
-          url: "future-continuous",
-          isActive: false,
-        },
-        {
-          title: "Future Perfect",
-          url: "future-perfect",
-          isActive: false,
-        },
-        {
-          title: "Future Perfect Continuous",
-          url: "future-perfect-continuous",
-          isActive: false,
-        },
-      ],
-    },
-  
-    {
-      title: "Vocab",
+      title: "Playground",
       url: "#",
-      isActive: false,
+      isActive: true,
       items: [
         {
-          title: "Greetings & Introductions",
-          url: "greetings-introductions",
-          isActive: false,
+          title: "History",
+          url: "#",
+        },
+        {
+          title: "Starred",
+          url: "#",
+        },
+        {
+          title: "Settings",
+          url: "#",
         },
       ],
     },
     {
-      title: "Other",
+      title: "Models",
       url: "#",
-      isActive: false,
       items: [
         {
-          title: "Postpositions",
-          url: "postpositions",
-          isActive: false,
+          title: "Genesis",
+          url: "#",
+        },
+        {
+          title: "Explorer",
+          url: "#",
+        },
+        {
+          title: "Quantum",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Documentation",
+      url: "#",
+      items: [
+        {
+          title: "Introduction",
+          url: "#",
+        },
+        {
+          title: "Get Started",
+          url: "#",
+        },
+        {
+          title: "Tutorials",
+          url: "#",
+        },
+        {
+          title: "Changelog",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      url: "#",
+      items: [
+        {
+          title: "General",
+          url: "#",
+        },
+        {
+          title: "Team",
+          url: "#",
+        },
+        {
+          title: "Billing",
+          url: "#",
+        },
+        {
+          title: "Limits",
+          url: "#",
         },
       ],
     },
   ],
+  navSecondary: [
+    {
+      title: "Support",
+      url: "#",
+    },
+    {
+      title: "Feedback",
+      url: "#",
+    },
+  ],
+  projects: [
+    {
+      name: "Design Engineering",
+      url: "#",
+    },
+    {
+      name: "Sales & Marketing",
+      url: "#",
+    },
+    {
+      name: "Travel",
+      url: "#",
+    },
+  ],
 }
 
-
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-
-  const [isActive, setIsActive] = useState(false); // hilight
-
   return (
-    <Sidebar variant="floating" {...props}>
+    <Sidebar variant="inset" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <GalleryVerticalEnd className="size-4" />
+                  <Command className="size-4" />
                 </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">LearnUrdu</span>
+                <div className="grid flex-1 text-left text-sm leading-tight">
+                  <span className="truncate font-semibold">Learn Urdu</span>
+                  <span className="truncate text-xs">By Yusuf Shahzad</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -161,31 +162,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarMenu className="gap-2">
-            {data.navMain.map((item) => (
-              <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild>
-                  <a href={item.url} className="font-medium">
-                    {item.title}
-                  </a>
-                </SidebarMenuButton>
-                {item.items?.length ? (
-                  <SidebarMenuSub className="ml-0 border-l-0 px-1.5">
-                    {item.items.map((item) => (
-                      <SidebarMenuSubItem key={item.title}>
-                        <SidebarMenuSubButton asChild isActive={item.isActive}>
-                          <a href={item.url}>{item.title}</a>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                    ))}
-                  </SidebarMenuSub>
-                ) : null}
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
-        </SidebarGroup>
+        <NavMain items={data.navMain} />
+        <NavProjects projects={data.projects} />
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
+      <SidebarFooter>
+        <NavUser user={data.user} />
+      </SidebarFooter>
     </Sidebar>
   )
 }
