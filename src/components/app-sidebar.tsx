@@ -34,83 +34,115 @@ const data = {
   },
   navMain: [
     {
-      title: "Playground",
-      url: "#",
-      isActive: true,
+      title: "Introduction",
+      url: "introduction",
+      isActive: false,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Hona - \"To Be\"",
+          url: "hona",
+          isActive: false,
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "Key Sentence Structure",
+          url: "basic-sentence-structure",
+          isActive: false,
         },
         {
-          title: "Settings",
-          url: "#",
+          title: "Noun Genders",
+          url: "noun-genders",
+          isActive: false,
         },
       ],
     },
     {
-      title: "Models",
-      url: "#",
+      title: "Tenses",
+      url: "tenses",
+      isActive: false,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "Simple Present",
+          url: "simple-present",
+          isActive: false,
         },
         {
-          title: "Explorer",
-          url: "#",
+          title: "Present Continuous",
+          url: "present-continuous",
+          isActive: false, //this controls the highlight!!!!!!!
         },
         {
-          title: "Quantum",
-          url: "#",
+          title: "Present Perfect",
+          url: "present-perfect",
+          isActive: false,
+        },
+        {
+          title: "Present Perfect Continuous",
+          url: "present-perfect-continuous",
+          isActive: false,
+        },
+        {
+          title: "Simple Past",
+          url: "simple-past",
+          isActive: false,
+        },
+        {
+          title: "Past Continuous",
+          url: "past-continuous",
+          isActive: false,
+        },
+        {
+          title: "Past Perfect",
+          url: "past-perfect",
+          isActive: false,
+        },
+        {
+          title: "Past Perfect Continuous",
+          url: "past-perfect-continuous",
+          isActive: false,
+        },
+        {
+          title: "Simple Future",
+          url: "simple-future",
+          isActive: false,
+        },
+        {
+          title: "Future Continuous",
+          url: "future-continuous",
+          isActive: false,
+        },
+        {
+          title: "Future Perfect",
+          url: "future-perfect",
+          isActive: false,
+        },
+        {
+          title: "Future Perfect Continuous",
+          url: "future-perfect-continuous",
+          isActive: false,
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Vocab",
       url: "#",
+      isActive: false,
       items: [
         {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
+          title: "Greetings & Introductions",
+          url: "greetings-introductions",
+          isActive: false,
         },
       ],
     },
     {
-      title: "Settings",
+      title: "Other",
       url: "#",
+      isActive: false,
       items: [
         {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          title: "Postpositions",
+          url: "postpositions",
+          isActive: false,
         },
       ],
     },
@@ -126,18 +158,7 @@ const data = {
     },
   ],
   projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-    },
-    {
-      name: "Travel",
-      url: "#",
-    },
+   
   ],
 }
 
