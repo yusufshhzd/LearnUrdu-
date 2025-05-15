@@ -15,12 +15,12 @@ export const SimpleFuture = () => {
 
   const data1 = [
     ['Subject', 'Verb Ending (Masculine)', 'Verb Ending (Feminine)'],
-    ['Mai (I)', '-ta hoon', '-ti hoon'],
-    ['Tum (You, informal)', '-tay ho', '-ti ho'],
-    ['Aap (You, formal)', '-tay hain', '-ti hain'],
-    ['Woh (He/She/It)', '-ta hai', '-ti hai'],
-    ['Woh (They)', '-tay hain', '-ti hain'],
-    ['Hum (We)', '-tay hain', '-ti hain']
+    ['Mai (I)', '-oonga', '-oongi'],
+    ['Tum (You, informal)', '-oge', '-ogi'],
+    ['Aap (You, formal)', '-enge', '-engi'],
+    ['Woh (He/She/It)', '-ega', '-egi'],
+    ['Woh (They)', '-enge', '-engi'],
+    ['Hum (We)', '-enge', '-engi']
   ];
 
 
@@ -44,6 +44,35 @@ export const SimpleFuture = () => {
               <Typography style={{ textAlign: "center" }} variant="h6">✅ Describe actions that will happen in the future<br /> <i>I will eat</i> <br /> <i>Mai khaoonga</i></Typography>
             </div>
           </Paper>
+
+
+          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 3 / 4, marginTop: '50px' }} >
+            <div className='card'>
+              <Typography variant="h5">Sentence Structure: [Subject] + [Verbal Stem] + [Ending]</Typography>
+              <Typography variant="h6">The ending depends on the number and gender of the <i>subject</i></Typography>
+              <ConjugationTable data={data1} />
+            </div>
+          </Paper>
+
+          <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }}>
+          <div className="card">
+            <Typography variant="h5">Examples</Typography>
+            <Typography style={{ textAlign: "center" }} variant="h6"><b>I will play cricket</b><br /> <i>Mai cricket kheloonga</i> <br /></Typography>
+            <Typography style={{ textAlign: "center" }} variant="h6"><b>You will watch a movie (female subject)</b><br /> <i>Tum movie dekhoongi</i> <br /></Typography>
+            <Typography style={{ textAlign: "center" }} variant="h6"><b>She will read a book</b><br /> <i>Woh kitaab parhegi</i> <br /></Typography>
+            <Typography style={{ textAlign: "center" }} variant="h6"><b>We will go shopping</b><br /> <i>Hum shopping jaayenge</i> <br /></Typography>
+          </div>
+        </Paper>
+
+
+        <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }}>
+          <div className="card">
+            <Typography variant="h5">Hona Exception</Typography>
+            <Typography style={{ textAlign: "center" }} variant="h6">Instead of using "-enge" at the end of "ho" for hona, <br/> we simply use "nge"</Typography>
+            <Typography style={{ textAlign: "center" }} variant="h6"><b>He will be there</b><br /> <i>Woh waha honge</i> <br /></Typography>
+          </div>
+        </Paper>
+
         </div>
 
 

@@ -60,7 +60,6 @@ function App() {
         <Route path="/postpositions" element={<Postpositions />} />
 
 
-        {/* <Route path="/chat-bot" element={<ChatBot />} /> */}
       </Routes>
       <ChatBotWidget/>
     </SidebarProvider>
