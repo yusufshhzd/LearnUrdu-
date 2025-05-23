@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import axios from 'axios';
-import '../css/ChatBot.css'; // Custom styles for the chatbot
+import '@/css/ChatBot.css'; // Custom styles for the chatbot
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { Paper, Typography } from '@mui/material';

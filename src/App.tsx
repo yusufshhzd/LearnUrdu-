@@ -23,8 +23,12 @@ import SimpleFuture from './pages/Tenses/Future/SimpleFuture';
 import FutureContinuous from './pages/Tenses/Future/FutureContinuous';
 import FuturePerfect from './pages/Tenses/Future/FuturePerfect';
 import FuturePerfectContinuous from './pages/Tenses/Future/FuturePerfectContinuous';
-import Greetings from './pages/Greetings';
+import Greetings from './pages/Vocab/Greetings';
 import NounGenders from './pages/NounGenders';
+import Home from './pages/Vocab/Home';
+import Education from './pages/Vocab/Education';
+import FoodAndEating from './pages/Vocab/FoodAndEating';
+import Daily from './pages/Vocab/Daily';
 
 function App() {
   return (
@@ -56,8 +60,16 @@ function App() {
         <Route path="/future-perfect-continuous" element={<FuturePerfectContinuous />} />
 
         <Route path="/greetings-introductions" element={<Greetings />} />
+        <Route path="/home-vocab" element={<Home />} />
+        <Route path="/education" element={<Education />} />
+        <Route path="/food" element={<FoodAndEating />} />
+        <Route path="/daily-routines" element={<Daily />} />
+
+
+
 
         <Route path="/postpositions" element={<Postpositions />} />
+        
 
 
       </Routes>

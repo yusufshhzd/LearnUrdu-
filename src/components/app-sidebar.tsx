@@ -132,6 +132,26 @@ const data = {
           url: "greetings-introductions",
           isActive: false,
         },
+        {
+          title: "Home",
+          url: "home-vocab",
+          isActive: false,
+        },
+        {
+          title: "Education",
+          url: "education",
+          isActive: false,
+        },
+        {
+          title: "Food",
+          url: "food",
+          isActive: false,
+        },
+        {
+          title: "Daily Routines",
+          url: "daily-routines",
+          isActive: false,
+        },
       ],
     },
     {
