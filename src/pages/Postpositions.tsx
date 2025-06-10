@@ -105,7 +105,7 @@ const Postpositions = () => {
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
-                                <Typography variant="h5">Par</Typography>
+                                <Typography variant="h5">Par/pe</Typography>
                                 <Typography sx = {{fontSize: '1rem'}}><i>The book is <b>on</b> the table</i><br/><i></i><i>Kitaab table <b>par/pe</b> hai</i></Typography>
                                 <Typography sx = {{fontSize: '1rem'}}><i>They are <b>at</b> the park</i><br/><i></i><i>Wo park <b>par/pe</b> hain</i></Typography>
                                 <Typography sx = {{fontSize: '1rem'}}><i>He is going <b>to</b> the station</i><br/><i></i><i>Wo station <b>par</b> ja raha hai</i></Typography>
@@ -115,11 +115,17 @@ const Postpositions = () => {
                             <div className='card'>
                                 <Typography variant="h5">Se</Typography>
                                 <Typography sx = {{fontSize: '1rem'}}><i>We are <b>from</b> Pakistan</i><br/><i></i><i>Hum Pakistan <b>se</b> hain</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I came <b>from</b> School</i><br/><i></i><i>Mai school <b>se</b> aaya</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>He wrote <b>with</b> a pen</i><br/><i></i><i>Os ne pen <b>se</b> likhaa</i></Typography>
+
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Ko</Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I am going <b>to</b> the store</i><br/><i></i><i>Mai dukhan <b>ko</b> jaa raha hoon</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I saw <b>her</b> yesterday</i><br/><i></i><i>Kal mai ne os <b>ko</b> dekhaa</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>Call <b>the</b> teacher</i><br/><i></i><i> Ustaad <b>ko</b> bulao</i></Typography>
                             </div>
                         </Paper>
                     </div>
@@ -129,22 +135,38 @@ const Postpositions = () => {
                             <div className='card'>
                                 <Typography variant="h5">Ke saath</Typography>
                                 <Typography sx = {{fontSize: '1rem'}}><i>I am <b>with</b> mother</i><br/><i></i><i>Mai Ami <b>ke saath</b> hoon</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I went <b>with</b> my friend</i><br/><i></i><i>Mai dost <b>ke saath</b> gaaya</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>He plays <b>with</b> a ball</i><br/><i></i><i>Wo ball <b>ke saath</b> kehta hai</i></Typography>
+
+
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Ke liye</Typography>
                                 <Typography sx = {{fontSize: '1rem'}}><i>That is <b>for</b> Yusuf</i><br/><i></i><i>Wo Yusuf <b>ke liye</b> hai</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>She works <b>for</b> her family</i><br/><i></i><i>Wo khandaan <b>ke liye</b> kaam karti hai</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I bought this <b>for</b> you</i><br/><i></i><i>Mai ne ye aap <b>ke liye</b> khareeda hai</i></Typography>
+
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Tak</Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>Wait <b>until</b> evening</i><br/><i></i><i>Shaam <b>tak</b> intezaar karo</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>He ran <b>up to</b> the gate</i><br/><i></i><i>Wo gate <b>tak</b> bhaaga</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I studied <b>until</b> midnight</i><br/><i></i><i>Mai aadhi raat <b>tak</b> pahrta raha</i></Typography>
+
+                            
+
                             </div>
                         </Paper>
                         <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 4, marginTop: '50px' }} >
                             <div className='card'>
                                 <Typography variant="h5">Ke paas</Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>I am sitting <b>near</b> my mother</i><br/><i></i><i>Mai ami <b>ke paas</b> beht rahi hoon</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>He <b>has</b> a pencil</i><br/><i></i><i>Us <b>ke paas</b> ek pencil hai</i></Typography>
+                                <Typography sx = {{fontSize: '1rem'}}><i>The bag is <b>near</b> the chair</i><br/><i></i><i>Bag kursi<b>ke paas</b> hai</i></Typography>
                             </div>
                         </Paper>
                     </div>
