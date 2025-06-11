@@ -5,13 +5,13 @@ import './App.css';
 import React, { createContext } from 'react';
 import SimplePast from './pages/Tenses/Past/SimplePast';
 import Tenses from './pages/Tenses/Tenses';
-import Introduction from './pages/Introduction';
-import BasicSentenceStructure from './pages/BasicSentenceStructure';
+import Introduction from './pages/Introduction/Introduction';
+import BasicSentenceStructure from './pages/Introduction/BasicSentenceStructure';
 // import ChatBot from './pages/ChatBot';
 import { SidebarProvider } from '@/components/ui/SidebarProvider';
-import Hona from './pages/Hona';
+import Hona from './pages/Introduction/Hona';
 import PresentContinous from './pages/Tenses/Present/PresentContinuous';
-import Postpositions from './pages/Postpositions';
+import Postpositions from './pages/Other/Postpositions';
 import ChatBotWidget from './components/ChatBotWidget';
 import { SupabaseClient, createClient } from '@supabase/supabase-js';
 import PresentPerfect from './pages/Tenses/Present/PresentPerfect';
@@ -24,11 +24,12 @@ import FutureContinuous from './pages/Tenses/Future/FutureContinuous';
 import FuturePerfect from './pages/Tenses/Future/FuturePerfect';
 import FuturePerfectContinuous from './pages/Tenses/Future/FuturePerfectContinuous';
 import Greetings from './pages/Vocab/Greetings';
-import NounGenders from './pages/NounGenders';
+import NounGenders from './pages/Introduction/NounGenders';
 import Home from './pages/Vocab/Home';
 import Education from './pages/Vocab/Education';
 import FoodAndEating from './pages/Vocab/FoodAndEating';
 import Daily from './pages/Vocab/Daily';
+import Commands from './pages/Other/Commands';
 
 function App() {
   return (
@@ -69,6 +70,8 @@ function App() {
 
 
         <Route path="/postpositions" element={<Postpositions />} />
+        <Route path="/commands" element={<Commands />} />
+
         
 
 
