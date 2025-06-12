@@ -93,13 +93,69 @@ const Commands = () => {
 
                             <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
                                 <ListItem sx={{ display: 'list-item' }}>
-                                    Verb = Hatna
+                                    Verb = khaana
                                 </ListItem>
                             </List>
 
-                            <b>Move</b> <br /> <i>Hato</i> <br />
+                            You <b>Eat</b> <br /> Aap <i>khaaiye</i> <br />
 
                         </Typography>
+
+                    </div>
+                </Paper>
+
+
+                <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
+                    <div className='card'>
+                        <Typography variant="h5">Special Cases</Typography>
+                        <Typography style={{ textAlign: "center" }} variant="h6"> Some specific words require -jiye in the formal</Typography>
+
+                        <Typography style={{ textAlign: "center" }} variant="h6">
+
+                            <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                                <ListItem sx={{ display: 'list-item' }}>
+                                    Verb = Dena
+                                </ListItem>
+                            </List>
+
+                            <b>Give</b><br /> Aap <i>deejiye</i> <br />
+
+
+                            <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                                <ListItem sx={{ display: 'list-item' }}>
+                                    Verb = Lena
+                                </ListItem>
+                            </List>
+
+                            <b>Take</b><br /> Aap <i>leejiye</i> <br />
+
+                        </Typography>
+
+                        <Typography style={{ textAlign: "center" }} variant="h6"> What about the same verbs in the informal? <br/> For verbs like dena or lena, you simply add -o to the first letter</Typography>
+
+                        <Typography style={{ textAlign: "center" }} variant="h6">
+
+                            <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                                <ListItem sx={{ display: 'list-item' }}>
+                                    Verb = Dena
+                                </ListItem>
+                            </List>
+
+                            <b>Give</b><br /> <i>do</i> <br />
+                            <b>Give me it</b><br /> Mujhe de<i>do</i> <br />
+
+
+                            <List sx={{ listStyleType: 'disc', listStylePosition: 'inside' }}>
+                                <ListItem sx={{ display: 'list-item' }}>
+                                    Verb = Lena
+                                </ListItem>
+                            </List>
+
+                            <b>Take</b><br /> <i>lo</i> <br />
+                            <b>You take it</b><br /> Tum le<i>lo</i> <br />
+
+                        </Typography>
+                        
 
                     </div>
                 </Paper>
