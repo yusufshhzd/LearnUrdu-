@@ -133,15 +133,17 @@ const SimplePast = () => {
             <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
               <div className='card'>
                 <Typography variant="h5">Examples</Typography>
-                <Typography style={{ textAlign: "center" }} variant="h6"><b>I watched a drama</b><br /> <i>Mai ne drama dekhaa</i> <br /></Typography>
-                <Typography style={{ textAlign: "center" }} variant="h6"><b>I watched dramas</b><br /> <i>Mai ne dramay dekhay</i> <br /></Typography>
-                <Typography style={{ textAlign: "center" }} variant="h6"><b>She bought a chair</b><br /> <i>Os ne kursi khareedee</i> <br /></Typography>
-                <Typography style={{ textAlign: "center" }} variant="h6"><b>She bought chairs</b><br /> <i>Os ne kursi khareedeen</i> <br /></Typography>
-                <Typography style={{ textAlign: "center" }} variant="h6"><b>❗️You drank milk</b><br /> <i>Tum ne doodh peeya</i> <br /></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6"><b>I ran</b><br /> <i>Mai bhaaga</i> <br /></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6"><b>She came</b><br /> <i>Wo aayee</i> <br /></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6"><b>You laughed</b><br /> <i>Aap hansay</i> <br /></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6"><b>We left</b><br /> <i>Hum chale gaaye</i> <br /></Typography>
+                <Typography style={{ textAlign: "center" }} variant="h6"><b>❗️I went to sleep yesterday</b><br /> <i>Mai kal so gaya </i> <br /></Typography>
+
               </div>
             </Paper>
           </div>
 
+          <Typography marginTop='40px' variant="h4">Take note of the following</Typography>
 
           <div className='rowDisplay'>
             <Paper elevation={7} sx={{ backgroundColor: "#E8E9EB", width: 1 / 2, marginTop: '50px' }} >
