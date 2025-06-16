@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <style>
+    text {
+      font-family: 'Noto Nastaliq Urdu', sans-serif;
+      font-size: 40px;
+      fill: white;
+    }
+  </style>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" transform="skewX(-15)">
+    سیکھو
+  </text>
+</svg>
