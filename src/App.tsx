@@ -30,6 +30,7 @@ import Education from './pages/Vocab/Education';
 import FoodAndEating from './pages/Vocab/FoodAndEating';
 import Daily from './pages/Vocab/Daily';
 import Commands from './pages/Other/Commands';
+import Possession from './pages/Other/Possession';
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
 
         <Route path="/postpositions" element={<Postpositions />} />
         <Route path="/commands" element={<Commands />} />
+        <Route path="/possession" element={<Possession />} />
 
         
 
