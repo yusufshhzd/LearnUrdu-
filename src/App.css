@@ -59,6 +59,7 @@
   /* justify-content: center; centers horizontally */
   align-items: center; /*centers vertically*/
   padding: 2rem;
+  min-width: 1200px;
 }
 
 
