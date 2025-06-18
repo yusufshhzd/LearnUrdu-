@@ -1,5 +1,5 @@
 import React from 'react';
-import '/src/css/WelcomePage.css';
+import '/src/css/IntroductionPage.css';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { useNavigate } from 'react-router-dom';

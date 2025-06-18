@@ -1,49 +1,74 @@
-/* Fullscreen center */
-.welcome-container {
+/* General Page Styles */
+.welcome-page {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f7fa;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background: linear-gradient(135deg, #5a5a5a, #333333);
+  color: white;
+  padding: 50px;
+  text-align: center;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
 }
 
-/* Card-style box */
-.welcome-card {
-  background-color: white;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  max-width: 500px;
-  width: 90%;
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-/* Heading */
-.welcome-card h1 {
-  font-size: 2.5rem;
-  color: #3a2f2f;
-  margin-bottom: 1rem;
-}
-
-/* Subtitle */
-.subtitle {
+.hero-content p {
   font-size: 1.2rem;
-  color: #5a4a4a;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Button */
-.start-button {
-  background-color: black;
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #276a31;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-.start-button:hover {
-  background-color: green;
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+.guest-button {
+  background-color: #6c757d;
+}
+
+.guest-button:hover {
+  background-color: #5a6268;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9rem;
 }

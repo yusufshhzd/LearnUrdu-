@@ -6,11 +6,11 @@ export function WelcomePage() {
   const navigate = useNavigate(); 
 
   const handleLogin = () => {
-    navigate("/tenses");  // Redirect to the login page
+    navigate("/introduction");  //eventually navigate to login
   };
 
   const handleGuest = () => {
-    navigate("/tenses");  // Redirect to the homepage as a guest
+    navigate("/introduction");  // Redirect to the homepage as a guest
   };
 
   return (
