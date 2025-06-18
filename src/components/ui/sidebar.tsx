@@ -38,7 +38,10 @@ export type SidebarContextProps = {
   setOpenMobile: (open: boolean) => void
   isMobile: boolean
   toggleSidebar: () => void
+  openGroups: Record<string, boolean> // ADD
+  toggleGroup: (key: string) => void  // ADD
 }
+
 
 export const SidebarContext = React.createContext<SidebarContextProps | null>(null)
 
@@ -73,6 +76,28 @@ const SidebarProvider = React.forwardRef<
   ) => {
     const isMobile = useIsMobile()
     const [openMobile, setOpenMobile] = React.useState(false)
+
+    // Local storage persisted dropdown group states
+    const [openGroups, setOpenGroups] = React.useState<Record<string, boolean>>(() => {
+      try {
+        const json = localStorage.getItem("sidebar_open_groups")
+        return json ? JSON.parse(json) : {}
+      } catch {
+        return {}
+      }
+    })
+
+    const toggleGroup = (groupKey: string) => {
+      setOpenGroups((prev) => {
+        const updated = {
+          ...prev,
+          [groupKey]: !prev[groupKey],
+        }
+        localStorage.setItem("sidebar_open_groups", JSON.stringify(updated))
+        return updated
+      })
+    }
+
 
     // This is the internal state of the sidebar.
     // We use openProp and setOpenProp for control from outside the component.
@@ -129,10 +154,12 @@ const SidebarProvider = React.forwardRef<
         openMobile,
         setOpenMobile,
         toggleSidebar,
+        openGroups,      // ADD THIS
+        toggleGroup,     // AND THIS
       }),
-      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
+      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar, openGroups]
     )
-
+    
     return (
       <SidebarContext.Provider value={contextValue}>
         <TooltipProvider delayDuration={0}>
@@ -623,7 +650,7 @@ const SidebarMenuAction = React.forwardRef<
         "peer-data-[size=lg]/menu-button:top-2.5",
         "group-data-[collapsible=icon]:hidden",
         showOnHover &&
-          "group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground md:opacity-0",
+        "group-focus-within/menu-item:opacity-100 group-hover/menu-item:opacity-100 data-[state=open]:opacity-100 peer-data-[active=true]/menu-button:text-sidebar-accent-foreground md:opacity-0",
         className
       )}
       {...props}
