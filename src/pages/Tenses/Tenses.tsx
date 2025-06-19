@@ -51,7 +51,7 @@ function Tenses() {
 
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Present\nPerfect"} onClick={() => navigate('/present-perfect')} />
+              <ContainedButton text={"Present\nPerfect"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -61,7 +61,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Present\nPerfect\nContinuous"} onClick={() => navigate('/present-perfect-continuous')} />
+              <ContainedButton text={"Present\nPerfect\nContinuous"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -92,7 +92,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Past\nContinuous"} onClick={() => navigate('/past-continuous')} />
+              <ContainedButton text={"Past\nContinuous"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -102,7 +102,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Past\nPerfect"} onClick={() => navigate('/past-perfect')} />
+              <ContainedButton text={"Past\nPerfect"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -112,7 +112,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Past\nPerfect\nContinuous"} onClick={() => navigate('/past-perfect-continuous')} />
+              <ContainedButton text={"Past\nPerfect\nContinuous"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -144,7 +144,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Future\nContinuous"} onClick={() => navigate('/future-continuous')} />
+              <ContainedButton text={"Future\nContinuous"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -154,7 +154,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Future\nPerfect"} onClick={() => navigate('/future-perfect')} />
+              <ContainedButton text={"Future\nPerfect"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>
@@ -164,7 +164,7 @@ function Tenses() {
             </div>
 
             <div className='buttonTenseDiv'>
-              <ContainedButton text={"Future\nPerfect\nContinuous"} onClick={() => navigate('/future-perfect-continuous')} />
+              <ContainedButton text={"Future\nPerfect\nContinuous"} onClick={() => navigate('/tenses')} />
               <div className='exampleTense'>
                 Example
               </div>

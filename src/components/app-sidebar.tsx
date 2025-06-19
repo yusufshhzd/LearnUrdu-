@@ -70,56 +70,56 @@ const data = {
           url: "present-continuous",
           isActive: false, //this controls the highlight!!!!!!!
         },
-        {
-          title: "Present Perfect",
-          url: "present-perfect",
-          isActive: false,
-        },
-        {
-          title: "Present Perfect Continuous",
-          url: "present-perfect-continuous",
-          isActive: false,
-        },
+        // {
+        //   title: "Present Perfect",
+        //   url: "present-perfect",
+        //   isActive: false,
+        // },
+        // {
+        //   title: "Present Perfect Continuous",
+        //   url: "present-perfect-continuous",
+        //   isActive: false,
+        // },
         {
           title: "Simple Past",
           url: "simple-past",
           isActive: false,
         },
-        {
-          title: "Past Continuous",
-          url: "past-continuous",
-          isActive: false,
-        },
-        {
-          title: "Past Perfect",
-          url: "past-perfect",
-          isActive: false,
-        },
-        {
-          title: "Past Perfect Continuous",
-          url: "past-perfect-continuous",
-          isActive: false,
-        },
+        // {
+        //   title: "Past Continuous",
+        //   url: "past-continuous",
+        //   isActive: false,
+        // },
+        // {
+        //   title: "Past Perfect",
+        //   url: "past-perfect",
+        //   isActive: false,
+        // },
+        // {
+        //   title: "Past Perfect Continuous",
+        //   url: "past-perfect-continuous",
+        //   isActive: false,
+        // },
         {
           title: "Simple Future",
           url: "simple-future",
           isActive: false,
         },
-        {
-          title: "Future Continuous",
-          url: "future-continuous",
-          isActive: false,
-        },
-        {
-          title: "Future Perfect",
-          url: "future-perfect",
-          isActive: false,
-        },
-        {
-          title: "Future Perfect Continuous",
-          url: "future-perfect-continuous",
-          isActive: false,
-        },
+        // {
+        //   title: "Future Continuous",
+        //   url: "future-continuous",
+        //   isActive: false,
+        // },
+        // {
+        //   title: "Future Perfect",
+        //   url: "future-perfect",
+        //   isActive: false,
+        // },
+        // {
+        //   title: "Future Perfect Continuous",
+        //   url: "future-perfect-continuous",
+        //   isActive: false,
+        // },
       ],
     },
     {
