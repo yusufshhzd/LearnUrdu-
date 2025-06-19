@@ -60,7 +60,7 @@
   align-items: center; /*centers vertically*/
   padding: 2rem;
   min-width: 1200px;
-  background: linear-gradient(to bottom right, #fafafa, #fdf8f2);
+  background: linear-gradient(to right, #fafafa, #ffeecf);
 }
 
 
