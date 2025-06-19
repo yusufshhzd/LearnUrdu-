@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { WelcomePage } from './pages/WelcomePage';
 import SimplePresent from './pages/Tenses/Present/SimplePresent';
 import './App.css';
@@ -33,6 +33,7 @@ import Commands from './pages/Other/Commands';
 import Possession from './pages/Other/Possession';
 
 function App() {
+
   return (
     <SidebarProvider>
       <Routes>

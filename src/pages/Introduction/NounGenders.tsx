@@ -7,9 +7,13 @@ import ChatBotWidget from '@/components/ChatBotWidget';
 import { SupabaseClient } from '@supabase/supabase-js';
 import ConjugationTable from '@/components/ConjugationTable';
 import ProgressBar from '@/components/ProgressBar/ProgressBar';
+import { useNavigate } from 'react-router-dom';
 
 
 export const NounGenders = () => {
+
+  const navigate = useNavigate();
+
 
 
 
@@ -78,6 +82,30 @@ export const NounGenders = () => {
               
             </div>
           </Paper>
+
+
+
+          <div className="buttonContainer">
+            {/* Previous Button: Arrow on RIGHT, pointing LEFT */}
+            <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black btn-arrow-slide-cont--reverse">
+              <span className="btn-arrow-slide-circle" aria-hidden="true">
+                <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
+              </span>
+              <span className="btn-arrow-slide-text" onClick={() => navigate('/basic-sentence-structure')}>
+                Previous
+              </span>
+            </button>
+
+            {/* Next Button: Arrow on LEFT, pointing RIGHT */}
+            <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black">
+              <span className="btn-arrow-slide-circle" aria-hidden="true">
+                <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
+              </span>
+              <span className="btn-arrow-slide-text" onClick={() => navigate('/tenses')}>
+                Next
+              </span>
+            </button>
+          </div>
 
 
           
