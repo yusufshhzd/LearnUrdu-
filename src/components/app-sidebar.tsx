@@ -1,21 +1,7 @@
-import * as React from "react"
-import {
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
+import React, { useEffect, useState } from "react"
+import { supabase } from "@/supabaseClient"
+import { useAuth } from '@/AuthContext'
 
-import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavSecondary } from "@/components/nav-secondary"
-import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
   SidebarContent,
@@ -26,6 +12,32 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
+import { NavMain } from "@/components/nav-main"
+import { NavSecondary } from "@/components/nav-secondary"
+import { NavUser } from "@/components/nav-user" // Your updated NavUser component
+
+
+
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { user, loading } = useAuth()
+
+  if (loading) {
+    // or return null / spinner
+    return null
+  }
+
+  const displayName = user?.user_metadata?.name || user?.email || 'Guest'
+
+  const avatarUrl = user?.user_metadata?.avatar || ""
+
+
+
+  const userForNavUser = {
+    name: displayName,
+    email: user?.email || "Not signed in",
+    avatar: avatarUrl,
+  }
+  
 const data = {
   user: {
     name: "LearnUrdu",
@@ -192,7 +204,6 @@ const data = {
   ],
 }
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
@@ -212,13 +223,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
+
       <SidebarContent>
         <NavMain items={data.navMain} />
         {/* <NavProjects projects={data.projects} /> */}
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
+
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={userForNavUser} />
       </SidebarFooter>
     </Sidebar>
   )
