@@ -45,7 +45,7 @@ export const NounGenders = () => {
         <AppSidebar />
         <SidebarTrigger />
         <div className="rightOfSidebar">
-        <ProgressBar />
+          <ProgressBar />
 
           <Typography variant="h4">Noun Genders</Typography>
 
@@ -79,36 +79,35 @@ export const NounGenders = () => {
               <Typography variant="h5">Plural Noun Rules</Typography>
               <ConjugationTable data={pluralNouns} />
 
-              
+
             </div>
           </Paper>
 
 
 
           <div className="buttonContainer">
-            {/* Previous Button: Arrow on RIGHT, pointing LEFT */}
-            <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black btn-arrow-slide-cont--reverse">
-              <span className="btn-arrow-slide-circle" aria-hidden="true">
-                <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
+            <button
+              className="btn-arrow-slide-cont-reverse"
+              onClick={() => navigate('/basic-sentence-structure')}
+            >
+              <span className="btn-arrow-slide-circle-reverse" aria-hidden="true">
+                <span className="btn-arrow-slide-icon-reverse btn-arrow-slide-arrow-reverse"></span>
               </span>
-              <span className="btn-arrow-slide-text" onClick={() => navigate('/basic-sentence-structure')}>
-                Previous
-              </span>
+              <span className="btn-arrow-slide-text-reverse">Back</span>
             </button>
 
-            {/* Next Button: Arrow on LEFT, pointing RIGHT */}
-            <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black">
+            <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black" onClick={() => navigate('/tenses')}>
               <span className="btn-arrow-slide-circle" aria-hidden="true">
                 <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
               </span>
-              <span className="btn-arrow-slide-text" onClick={() => navigate('/tenses')}>
+              <span className="btn-arrow-slide-text" >
                 Next
               </span>
             </button>
           </div>
 
 
-          
+
 
 
 

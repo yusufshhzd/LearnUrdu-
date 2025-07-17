@@ -85,39 +85,10 @@
 
 .buttonContainer {
     display: flex;
-    justify-content: space-between; /* THIS is key */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding-top: 100px;
-  }
-
-  .btn-arrow-slide-cont--reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .btn-arrow-slide-cont--reverse .btn-arrow-slide-text {
-    margin: 0 1.85rem 0 0;
-    direction: ltr;
-  }
-  
-  .btn-arrow-slide-cont--reverse .btn-arrow-slide-circle {
-    margin-left: 0;
-    margin-right: 0;
-    float: right;
-  }
-  
-  .btn-arrow-slide-cont--reverse:hover .btn-arrow-slide-circle {
-    width: 100%;
-  }
-  
-  .btn-arrow-slide-cont--reverse:hover .btn-arrow-slide-circle .btn-arrow-slide-icon.btn-arrow-slide-arrow {
-    transform: translate(7.5rem, 0);
-  }
-  
-  .btn-arrow-slide-cont--reverse .btn-arrow-slide-arrow::before {
-    transform: rotate(225deg); /* rotate left */
-    left: 0.0625rem;
-    right: auto;
   }
 
   

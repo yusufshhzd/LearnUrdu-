@@ -1,0 +1,75 @@
+.btn-arrow-slide-cont-reverse {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 180px;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 1.625rem;
+}
+
+.btn-arrow-slide-circle-reverse {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 3rem;
+    background: #333;
+    border-radius: 1.625rem;
+    z-index: 1;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-arrow-slide-icon-reverse {
+    position: relative;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);;
+}
+
+.btn-arrow-slide-arrow-reverse::before {
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-left: 0.125rem solid #fff;
+    transform: rotate(-45deg);
+}
+
+.btn-arrow-slide-text-reverse {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    text-align: center;
+    margin-right: 1.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    transition: color 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.btn-arrow-slide-cont-reverse:hover .btn-arrow-slide-circle-reverse {
+    width: 100%;
+}
+
+.btn-arrow-slide-cont-reverse:hover .btn-arrow-slide-icon-reverse {
+    transform: translate(3rem, 0);
+    background: #fff;
+}
+
+.btn-arrow-slide-cont-reverse:hover .btn-arrow-slide-text-reverse {
+    color: #fff;
+}

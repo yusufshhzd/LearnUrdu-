@@ -5,7 +5,7 @@ import { Paper, Typography } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '/src/css/NextButton.css'
-import '/src/css/NextButton.css'
+import '/src/css/PreviousButton.css'
 
 
 
@@ -24,7 +24,6 @@ const Hona = () => {
         ['He/She/It is (near)', 'Ye', 'hai'],
         ['We are', 'Hum', 'hain']
     ];
-
 
 
     return (
@@ -47,25 +46,22 @@ const Hona = () => {
                         </div>
                     </Paper>
 
-
-
                     <div className="buttonContainer">
-                        {/* Previous Button: Arrow on RIGHT, pointing LEFT */}
-                        <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black btn-arrow-slide-cont--reverse">
-                            <span className="btn-arrow-slide-circle" aria-hidden="true">
-                                <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
+                        <button
+                            className="btn-arrow-slide-cont-reverse"
+                            onClick={() => navigate('/introduction')}
+                        >
+                            <span className="btn-arrow-slide-circle-reverse" aria-hidden="true">
+                                <span className="btn-arrow-slide-icon-reverse btn-arrow-slide-arrow-reverse"></span>
                             </span>
-                            <span className="btn-arrow-slide-text" onClick={() => navigate('/introduction')}>
-                                Previous
-                            </span>
+                            <span className="btn-arrow-slide-text-reverse">Back</span>
                         </button>
 
-                        {/* Next Button: Arrow on LEFT, pointing RIGHT */}
-                        <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black">
+                        <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black" onClick={() => navigate('/basic-sentence-structure')}>
                             <span className="btn-arrow-slide-circle" aria-hidden="true">
                                 <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
                             </span>
-                            <span className="btn-arrow-slide-text" onClick={() => navigate('/basic-sentence-structure')}>
+                            <span className="btn-arrow-slide-text" >
                                 Next
                             </span>
                         </button>

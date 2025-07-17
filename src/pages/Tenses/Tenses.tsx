@@ -41,10 +41,10 @@ function Tenses() {
             <div className='buttonTenseDiv'>
               <ContainedButton text={"Present\nContinuous"} onClick={() => navigate('/present-continuous')} />
               <div className='exampleTense'>
-              <Typography>"I am eating food"</Typography>
+                <Typography>"I am eating food"</Typography>
               </div>
               <div className='exampleTense'>
-              <Typography>"Mai khana kha raha hoon"</Typography>
+                <Typography>"Mai khana kha raha hoon"</Typography>
               </div>
             </div>
 
@@ -175,6 +175,29 @@ function Tenses() {
           </div>
 
         </Paper>
+
+
+        <div className="buttonContainer">
+          <button
+            className="btn-arrow-slide-cont-reverse"
+            onClick={() => navigate('/noun-genders')}
+          >
+            <span className="btn-arrow-slide-circle-reverse" aria-hidden="true">
+              <span className="btn-arrow-slide-icon-reverse btn-arrow-slide-arrow-reverse"></span>
+            </span>
+            <span className="btn-arrow-slide-text-reverse">Back</span>
+          </button>
+
+
+          <button className="btn-arrow-slide-cont btn-arrow-slide-cont--black" onClick={() => navigate('/simple-present')}>
+            <span className="btn-arrow-slide-circle" aria-hidden="true">
+              <span className="btn-arrow-slide-icon btn-arrow-slide-arrow"></span>
+            </span>
+            <span className="btn-arrow-slide-text" >
+              Next
+            </span>
+          </button>
+        </div>
 
       </div>
     </SidebarProvider>
