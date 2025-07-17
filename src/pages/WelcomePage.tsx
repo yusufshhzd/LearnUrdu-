@@ -1,13 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";  
 import '../css/WelcomePage.css'; 
-import { supabase } from '../supabaseClient'
 
 export function WelcomePage() {
   const navigate = useNavigate(); 
 
   const handleLogin = () => {
-    navigate("/login");  //eventually navigate to login
+    navigate("/introduction");  //eventually navigate to login
   };
 
   const handleGuest = () => {

@@ -31,13 +31,10 @@ import FoodAndEating from './pages/Vocab/FoodAndEating';
 import Daily from './pages/Vocab/Daily';
 import Commands from './pages/Other/Commands';
 import Possession from './pages/Other/Possession';
-import Login from './Login';
-import { AuthProvider } from '@/AuthContext'
 
 function App() {
 
   return (
-    <AuthProvider>
     <SidebarProvider>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
@@ -78,15 +75,12 @@ function App() {
         <Route path="/commands" element={<Commands />} />
         <Route path="/possession" element={<Possession />} />
 
-        <Route path="/login" element={<Login />} />
-
         
 
 
       </Routes>
       <ChatBotWidget/>
     </SidebarProvider>
-    </AuthProvider>
 
   );
 }
